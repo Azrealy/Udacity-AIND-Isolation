@@ -200,11 +200,9 @@ class Board(object):
         None
         """
         row, col = move
-
         self.__last_player_move__[self.active_player] = move
         self.__board_state__[row][col] = self.__player_symbols__[self.active_player]
         self.__active_player__, self.__inactive_player__ = self.__inactive_player__, self.__active_player__
-
         self.move_count += 1
 
     def is_winner(self, player):

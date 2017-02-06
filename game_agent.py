@@ -160,33 +160,11 @@ class CustomPlayer:
         tuple(int, int)
             The best move for the current branch; (-1, -1) for no legal moves
         """
-
-
-      #  if self.time_left() < self.TIMER_THRESHOLD:
-      #      raise Timeout()
-
-
         if self.time_left() < self.TIMER_THRESHOLD:
             raise Timeout()
 
-        if depth == 0:
-            return self.score(game, game.inactive_player), game.get_player_location(game.inactive_player)
-
-        possible_moves = game.get_legal_moves(game.active_player)
-
-        if not possible_moves:
-            return self.score(game, game.active_player), (-1,-1)
-        else:
-            if maximizing_player:
-                return max([self.minimax(game.forecast_move(move), depth - 1, not maximizing_player)
-                            for move in possible_moves])
-            else:
-                return min([self.minimax(game.forecast_move(move), depth - 1, not maximizing_player)
-                            for move in possible_moves])
-
-
         # TODO: finish this function!
-        #raise NotImplementedError
+        raise NotImplementedError
 
     def alphabeta(self, game, depth, alpha=float("-inf"), beta=float("inf"), maximizing_player=True):
         """Implement minimax search with alpha-beta pruning as described in the
