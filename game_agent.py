@@ -168,7 +168,7 @@ class CustomPlayer:
 
         if self.time_left() < self.TIMER_THRESHOLD:
             raise Timeout()
-
+        '''
         if depth == 0:
             return self.score(game, game.inactive_player), game.get_player_location(game.inactive_player)
 
@@ -184,6 +184,47 @@ class CustomPlayer:
                 return min([self.minimax(game.forecast_move(move), depth - 1, not maximizing_player)
                             for move in possible_moves])
 
+        '''
+        path = []
+        score, path = self.minimax_aux(game, depth, path)
+        return score, path[0]
+
+    def minimax_aux(self, game, depth, path, maximizing_player=True):
+        print(maximizing_player)
+
+        if depth == 0:
+            if (not maximizing_player):
+                return self.score(game, game.inactive_player),path
+            else:
+                return self.score(game, game.active_player), path
+
+        possible_moves = game.get_legal_moves(game.active_player)
+
+        if not possible_moves:
+            if (not maximizing_player):
+                return self.score(game, game.inactive_player),path
+            else:
+                return self.score(game, game.active_player), path
+        else:
+            print(possible_moves)
+            move = possible_moves[0]
+            newP = list(path)
+            newP.append(move)
+            value = self.minimax_aux(game.forecast_move(move), depth - 1, newP, not maximizing_player)
+
+            for i in range(1,len(possible_moves)):
+                move = possible_moves[i]
+                newP = list(path)
+                newP.append(move)
+
+                if maximizing_player:
+                    value = max(value,self.minimax_aux(game.forecast_move(move), depth - 1, newP, not maximizing_player))
+                else:
+                    value = min(value,
+                               self.minimax_aux(game.forecast_move(move), depth - 1, newP, not maximizing_player))
+
+            print("value:", value)
+            return value
 
         # TODO: finish this function!
         #raise NotImplementedError
