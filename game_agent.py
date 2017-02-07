@@ -166,23 +166,34 @@ class CustomPlayer:
 
         path = []
         score, path = self.minimax_aux(game, depth, path, maximizing_player)
-        return score, path[0]
+
+        choose = path[0]
+
+        if not maximizing_player:
+            choose = path[1]
+
+        return score, choose
 
     def minimax_aux(self, game, depth, path, maximizing_player=True):
 
         possible_moves = game.get_legal_moves(game.active_player)
 
         if depth == 0 or not possible_moves:
+            if not path:
+                path = [(-1,-1)]
+
             if maximizing_player:
                 return self.score(game, game.active_player),path
             else:
                 return self.score(game, game.inactive_player), path
         else:
 
+            search_in_childs = [self.minimax_aux(game.forecast_move(move), depth - 1, path+[move], not maximizing_player) for move in possible_moves]
+
             if maximizing_player:
-                return max([self.minimax_aux(game.forecast_move(move), depth - 1, path+[move], not maximizing_player) for move in possible_moves])
+                return max(search_in_childs)
             else:
-                return min([self.minimax_aux(game.forecast_move(move), depth - 1, path+[move], not maximizing_player) for move in possible_moves])
+                return min(search_in_childs)
 
 
     def alphabeta(self, game, depth, alpha=float("-inf"), beta=float("inf"), maximizing_player=True):
@@ -220,5 +231,80 @@ class CustomPlayer:
         if self.time_left() < self.TIMER_THRESHOLD:
             raise Timeout()
 
-        # TODO: finish this function!
-        raise NotImplementedError
+        path = []
+        value, path = self.alphabeta_max_value(game,depth, path)
+        return value, path[0]
+
+
+
+    def alphabeta_max_value(self, game, depth, path, alpha=float("-inf"), beta=float("inf"), maximizing_player=True):
+        if depth == 0:
+            return self.score(game, game.active_player), path
+
+        v = float("-inf")
+        v_move = None
+
+        possible_moves = game.get_legal_moves(game.active_player)
+
+        for move in possible_moves:
+            forecast_game = game.forecast_move(move)
+
+            new_v = self.alphabeta_min_value(forecast_game, depth-1, path, alpha, beta)[0]
+
+            if new_v > v:
+                v = new_v
+                v_move = move
+
+            #v = max(v, self.alphabeta_min_value(forecast_game, depth-1, path, alpha, beta)[0])
+
+            if v >= beta:
+                new_path = path.copy()
+                new_path.append(move)
+                return v, new_path
+
+            alpha = max(alpha,v)
+
+
+        new_path = path.copy()
+
+        if v_move:
+            new_path.append(v_move)
+
+        return v, new_path
+
+
+    def alphabeta_min_value(self, game, depth, path, alpha=float("-inf"), beta=float("inf"), maximizing_player=True):
+        if depth == 0:
+            return self.score(game, game.active_player), path
+
+        v = float("inf")
+        v_move = None
+
+        possible_moves = game.get_legal_moves(game.active_player)
+
+        for move in possible_moves:
+            forecast_game = game.forecast_move(move)
+
+            new_v = self.alphabeta_max_value(forecast_game, depth - 1, path, alpha, beta)[0]
+
+            if new_v < v:
+                v = new_v
+                v_move = move
+
+            if v <= alpha:
+                new_path = path.copy()
+                new_path.append(move)
+                return v,new_path
+
+            beta = min(beta, v)
+
+        new_path = path.copy()
+        if v_move:
+            new_path.append(v_move)
+
+        return v, new_path
+
+
+
+
+
