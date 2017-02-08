@@ -8,11 +8,9 @@ relative strength using tournament.py and include the results in your report.
 """
 import random
 
-
 class Timeout(Exception):
     """Subclass base exception for code clarity."""
     pass
-
 
 def custom_score(game, player):
     """Calculate the heuristic value of a game state from the point of view
@@ -37,9 +35,16 @@ def custom_score(game, player):
         The heuristic value of the current game state to the specified player.
     """
 
-    # TODO: finish this function!
-    raise NotImplementedError
+    def my_moves_score(game, player):
+        my_moves = len(game.get_legal_moves(player))
+        return float(my_moves)
 
+    def my_moves_vs_opponent_score(game, player):
+        my_moves = len(game.get_legal_moves(player))
+        opponent_moves = len(game.get_legal_moves(game.get_opponent(player)))
+        return float(my_moves - opponent_moves)
+
+    return my_moves_score(game,player)
 
 class CustomPlayer:
     """Game-playing agent that chooses a move using your evaluation function
