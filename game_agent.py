@@ -115,25 +115,42 @@ class CustomPlayer:
 
         self.time_left = time_left
 
-        # TODO: finish this function!
-
         # Perform any required initializations, including selecting an initial
         # move from the game board (i.e., an opening book), or returning
         # immediately if there are no legal moves
+
+        best_move = None
+
+        method = getattr(self, self.method)
+
 
         try:
             # The search method call (alpha beta or minimax) should happen in
             # here in order to avoid timeout. The try/except block will
             # automatically catch the exception raised by the search method
             # when the timer gets close to expiring
-            pass
+            if self.iterative:
+                depth = 0
+                selected = []
+                while (True):
+                    move = method(game, depth)
+                    selected.append(move)
+                    depth = depth+1
+
+            else:
+                _,best_move = method(game,self.search_depth)
+
 
         except Timeout:
             # Handle any actions required at timeout, if necessary
             pass
 
+        if self.iterative:
+            best_move = max(selected)[1]
         # Return the best move from the last completed search iteration
-        raise NotImplementedError
+        return best_move
+
+        # raise NotImplementedError
 
     def minimax(self, game, depth, maximizing_player=True):
         """Implement the minimax search algorithm as described in the lectures.
@@ -180,7 +197,7 @@ class CustomPlayer:
 
         if depth == 0 or not possible_moves:
             if not path:
-                path = [(-1,-1)]
+                return (float("-inf"), (-1,-1) )
 
             if maximizing_player:
                 return self.score(game, game.active_player),path
@@ -241,68 +258,46 @@ class CustomPlayer:
         if depth == 0:
             return self.score(game, game.active_player), path
 
-        v = float("-inf")
-        v_move = None
-
+        candidate = (float("-inf"), None)
         possible_moves = game.get_legal_moves(game.active_player)
 
         for move in possible_moves:
             forecast_game = game.forecast_move(move)
 
-            new_v = self.alphabeta_min_value(forecast_game, depth-1, path, alpha, beta)[0]
+            move_score = self.alphabeta_min_value(forecast_game, depth-1, path, alpha, beta)[0]
 
-            if new_v > v:
-                v = new_v
-                v_move = move
+            if move_score > candidate[0]:
+                candidate = (move_score, path+[move])
 
-            #v = max(v, self.alphabeta_min_value(forecast_game, depth-1, path, alpha, beta)[0])
+            if move_score >= beta:
+                return move_score, path+[move]
 
-            if v >= beta:
-                new_path = path.copy()
-                new_path.append(move)
-                return v, new_path
+            alpha = max(alpha,move_score)
 
-            alpha = max(alpha,v)
-
-
-        new_path = path.copy()
-
-        if v_move:
-            new_path.append(v_move)
-
-        return v, new_path
+        return candidate
 
 
     def alphabeta_min_value(self, game, depth, path, alpha=float("-inf"), beta=float("inf"), maximizing_player=True):
         if depth == 0:
             return self.score(game, game.active_player), path
 
-        v = float("inf")
-        v_move = None
-
+        candidate = (float("inf"),None)
         possible_moves = game.get_legal_moves(game.active_player)
 
         for move in possible_moves:
             forecast_game = game.forecast_move(move)
 
-            new_v = self.alphabeta_max_value(forecast_game, depth - 1, path, alpha, beta)[0]
+            move_score = self.alphabeta_max_value(forecast_game, depth - 1, path, alpha, beta)[0]
 
-            if new_v < v:
-                v = new_v
-                v_move = move
+            if move_score < candidate[0]:
+                candidate = (move_score,move)
 
-            if v <= alpha:
-                new_path = path.copy()
-                new_path.append(move)
-                return v,new_path
+            if candidate[0] <= alpha:
+                return move_score,path+[move]
 
-            beta = min(beta, v)
+            beta = min(beta, move_score)
 
-        new_path = path.copy()
-        if v_move:
-            new_path.append(v_move)
-
-        return v, new_path
+        return candidate
 
 
 
