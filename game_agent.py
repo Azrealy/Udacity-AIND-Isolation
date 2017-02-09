@@ -7,6 +7,7 @@ You must test your agent's strength against a set of agents with known
 relative strength using tournament.py and include the results in your report.
 """
 import random
+import sample_players
 
 class Timeout(Exception):
     """Subclass base exception for code clarity."""
@@ -36,6 +37,12 @@ def custom_score(game, player):
     """
 
     def my_moves_score(game, player):
+        if game.is_loser(player):
+            return float("-inf")
+
+        if game.is_winner(player):
+            return float("inf")
+
         my_moves = len(game.get_legal_moves(player))
         return float(my_moves)
 
@@ -44,7 +51,7 @@ def custom_score(game, player):
         opponent_moves = len(game.get_legal_moves(game.get_opponent(player)))
         return float(my_moves - opponent_moves)
 
-    return my_moves_score(game,player)
+    return sample_players.improved_score(game, player)
 
 class CustomPlayer:
     """Game-playing agent that chooses a move using your evaluation function
@@ -127,34 +134,41 @@ class CustomPlayer:
         # move from the game board (i.e., an opening book), or returning
         # immediately if there are no legal moves
 
-        best_move = None
-
         method = getattr(self, self.method)
-
+        best_move = (-1,-1)
 
         try:
             # The search method call (alpha beta or minimax) should happen in
             # here in order to avoid timeout. The try/except block will
             # automatically catch the exception raised by the search method
             # when the timer gets close to expiring
+
             if self.iterative:
                 depth = 0
-                selected = []
+                selected = [(float("-inf"),(-1,-1))]
+
                 while (True):
                     move = method(game, depth)
                     selected.append(move)
                     depth = depth+1
 
+
             else:
                 _,best_move = method(game,self.search_depth)
-
+                print("1:",best_move)
 
         except Timeout:
             # Handle any actions required at timeout, if necessary
-            pass
+            if self.iterative:
+                best_move = max(selected)[1]
+            print(best_move)
+                # Return the best move from the last completed search iteration
+            return best_move
+
 
         if self.iterative:
             best_move = max(selected)[1]
+        print(best_move)
         # Return the best move from the last completed search iteration
         return best_move
 
@@ -207,11 +221,15 @@ class CustomPlayer:
 
     def minimax_aux(self, game, depth, path, maximizing_player=True):
 
+        if self.time_left() < self.TIMER_THRESHOLD:
+            raise Timeout()
+
         possible_moves = game.get_legal_moves(game.active_player)
 
         if depth == 0 or not possible_moves:
             if not path:
-                return (float("-inf"), (-1,-1) )
+                return float("-inf"), [(-1,-1)]
+
 
             if maximizing_player:
                 return self.score(game, game.active_player),path
@@ -270,15 +288,23 @@ class CustomPlayer:
 
         path = []
         value, path = self.alphabeta_max_value(game,depth, path)
+
+        if len(path) == 0:
+            return float("-inf"),(-1,-1)
+
         return value, path[0]
 
 
 
     def alphabeta_max_value(self, game, depth, path, alpha=float("-inf"), beta=float("inf"), maximizing_player=True):
+
+        if self.time_left() < self.TIMER_THRESHOLD:
+            raise Timeout()
+
         if depth == 0:
             return self.score(game, game.active_player), path
 
-        candidate = (float("-inf"), None)
+        candidate = (float("-inf"), [(-1,-1)])
         possible_moves = game.get_legal_moves(game.active_player)
 
         for move in possible_moves:
@@ -298,10 +324,14 @@ class CustomPlayer:
 
 
     def alphabeta_min_value(self, game, depth, path, alpha=float("-inf"), beta=float("inf"), maximizing_player=True):
+
+        if self.time_left() < self.TIMER_THRESHOLD:
+            raise Timeout()
+
         if depth == 0:
             return self.score(game, game.active_player), path
 
-        candidate = (float("inf"),None)
+        candidate = (float("inf"),[(-1,-1)])
         possible_moves = game.get_legal_moves(game.active_player)
 
         for move in possible_moves:
