@@ -1,0 +1,157 @@
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/my_test.py
+
+*************************
+Evaluating: Student GameStart
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student GameStart vs   Random    	Result: 74 to 6
+  Match 2: Student GameStart vs   MM_Null   	Result: 73 to 7
+  Match 3: Student GameStart vs   MM_Open   	Result: 65 to 15
+  Match 4: Student GameStart vs MM_Improved 	Result: 65 to 15
+  Match 5: Student GameStart vs   AB_Null   	Result: 71 to 9
+  Match 6: Student GameStart vs   AB_Open   	Result: 54 to 26
+  Match 7: Student GameStart vs AB_Improved 	Result: 54 to 26
+
+
+Results:
+----------
+Student GameStart     81.43%
+
+*************************
+Evaluating: Student mixed new4
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student mixed new4 vs   Random    	Result: 75 to 5
+  Match 2: Student mixed new4 vs   MM_Null   	Result: 79 to 1
+  Match 3: Student mixed new4 vs   MM_Open   	Result: 61 to 19
+  Match 4: Student mixed new4 vs MM_Improved 	Result: 59 to 21
+  Match 5: Student mixed new4 vs   AB_Null   	Result: 71 to 9
+  Match 6: Student mixed new4 vs   AB_Open   	Result: 55 to 25
+  Match 7: Student mixed new4 vs AB_Improved 	Result: 50 to 30
+
+
+Results:
+----------
+Student mixed new4     80.36%
+
+*************************
+Evaluating: Student my_moves_vs_opponent_score3
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student my_moves_vs_opponent_score3 vs   Random    	Result: 76 to 4
+  Match 2: Student my_moves_vs_opponent_score3 vs   MM_Null   	Result: 74 to 6
+  Match 3: Student my_moves_vs_opponent_score3 vs   MM_Open   	Result: 66 to 14
+  Match 4: Student my_moves_vs_opponent_score3 vs MM_Improved 	Result: 58 to 22
+  Match 5: Student my_moves_vs_opponent_score3 vs   AB_Null   	Result: 72 to 8
+  Match 6: Student my_moves_vs_opponent_score3 vs   AB_Open   	Result: 53 to 27
+  Match 7: Student my_moves_vs_opponent_score3 vs AB_Improved 	Result: 44 to 36
+
+
+Results:
+----------
+Student my_moves_vs_opponent_score3     79.11%
+
+*************************
+Evaluating: Student my_moves_vs_opponent_score4
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student my_moves_vs_opponent_score4 vs   Random    	Result: 75 to 5
+  Match 2: Student my_moves_vs_opponent_score4 vs   MM_Null   	Result: 75 to 5
+/home/lety/workspace/Udacity-AIND-Isolation/tournament.py:99: UserWarning: One or more agents lost a match this round due to timeout. The get_move() function must return before time_left() reaches 0 ms. You will need to leave some time for the function to return, and may need to increase this margin to avoid timeouts during  tournament play.
+  warnings.warn(TIMEOUT_WARNING)
+  Match 3: Student my_moves_vs_opponent_score4 vs   MM_Open   	Result: 62 to 18
+  Match 4: Student my_moves_vs_opponent_score4 vs MM_Improved 	Result: 63 to 17
+  Match 5: Student my_moves_vs_opponent_score4 vs   AB_Null   	Result: 74 to 6
+  Match 6: Student my_moves_vs_opponent_score4 vs   AB_Open   	Result: 54 to 26
+  Match 7: Student my_moves_vs_opponent_score4 vs AB_Improved 	Result: 46 to 34
+
+
+Results:
+----------
+Student my_moves_vs_opponent_score4     80.18%
+
+*************************
+Evaluating: Student my_moves_vs_opponent_score5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student my_moves_vs_opponent_score5 vs   Random    	Result: 75 to 5
+  Match 2: Student my_moves_vs_opponent_score5 vs   MM_Null   	Result: 68 to 12
+  Match 3: Student my_moves_vs_opponent_score5 vs   MM_Open   	Result: 62 to 18
+  Match 4: Student my_moves_vs_opponent_score5 vs MM_Improved 	Result: 57 to 23
+  Match 5: Student my_moves_vs_opponent_score5 vs   AB_Null   	Result: 67 to 13
+  Match 6: Student my_moves_vs_opponent_score5 vs   AB_Open   	Result: 53 to 27
+  Match 7: Student my_moves_vs_opponent_score5 vs AB_Improved 	Result: 50 to 30
+
+
+Results:
+----------
+Student my_moves_vs_opponent_score5     77.14%
+
+*************************
+Evaluating: Student mixed new
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student mixed new vs   Random    	Result: 78 to 2
+  Match 2: Student mixed new vs   MM_Null   	Result: 77 to 3
+  Match 3: Student mixed new vs   MM_Open   	Result: 65 to 15
+  Match 4: Student mixed new vs MM_Improved 	Result: 61 to 19
+  Match 5: Student mixed new vs   AB_Null   	Result: 69 to 11
+  Match 6: Student mixed new vs   AB_Open   	Result: 52 to 28
+  Match 7: Student mixed new vs AB_Improved 	Result: 46 to 34
+
+
+Results:
+----------
+Student mixed new     80.00%
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 77 to 3
+  Match 2: ID_Improved vs   MM_Null   	Result: 73 to 7
+  Match 3: ID_Improved vs   MM_Open   	Result: 53 to 27
+  Match 4: ID_Improved vs MM_Improved 	Result: 64 to 16
+  Match 5: ID_Improved vs   AB_Null   	Result: 67 to 13
+  Match 6: ID_Improved vs   AB_Open   	Result: 57 to 23
+  Match 7: ID_Improved vs AB_Improved 	Result: 57 to 23
+
+
+Results:
+----------
+ID_Improved         80.00%
+
+*************************
+Evaluating: Student common_moves
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student common_moves vs   Random    	Result: 78 to 2
+  Match 2: Student common_moves vs   MM_Null   	Result: 70 to 10
+  Match 3: Student common_moves vs   MM_Open   	Result: 62 to 18
+  Match 4: Student common_moves vs MM_Improved 	Result: 56 to 24
+  Match 5: Student common_moves vs   AB_Null   	Result: 73 to 7
+  Match 6: Student common_moves vs   AB_Open   	Result: 53 to 27
+  Match 7: Student common_moves vs AB_Improved 	Result: 47 to 33
+
+
+Results:
+----------
+Student common_moves     78.39%
+
+Process finished with exit code 0

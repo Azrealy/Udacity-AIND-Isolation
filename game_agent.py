@@ -13,6 +13,155 @@ class Timeout(Exception):
     """Subclass base exception for code clarity."""
     pass
 
+def game_start(game, player):
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+    if game.move_count == 1 or game.move_count == 2:
+        location = game.get_player_location(player)
+        v = (location[0] - 3 + location[1] - 3)
+        rate = v * v
+
+        closeIndex = 10
+
+        if not rate == 0:
+            closeIndex = 10 / rate
+
+        return closeIndex
+    else:
+        my_moves = game.get_legal_moves(player)
+        opponent_moves = game.get_legal_moves(game.get_opponent(player))
+
+        return float(len(my_moves) - 3 * len(opponent_moves))
+
+
+def common_moves(game, player):
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+
+    my_moves = game.get_legal_moves(player)
+    opponent_moves = game.get_legal_moves(game.get_opponent(player))
+
+    common_moves = set(my_moves).intersection(set(opponent_moves))
+
+    return float(len(my_moves)-len(opponent_moves)+len(common_moves))
+
+def my_moves_vs_opponent_score(game, player):
+    my_moves = len(game.get_legal_moves(player))
+    opponent_moves = len(game.get_legal_moves(game.get_opponent(player)))
+
+    return float(my_moves - 2*opponent_moves)
+
+def my_moves_vs_opponent_score3(game, player):
+    my_moves = len(game.get_legal_moves(player))
+    opponent_moves = len(game.get_legal_moves(game.get_opponent(player)))
+
+    return float(my_moves - 3*opponent_moves)
+
+def my_moves_vs_opponent_score4(game, player):
+    my_moves = len(game.get_legal_moves(player))
+    opponent_moves = len(game.get_legal_moves(game.get_opponent(player)))
+
+    return float(my_moves - 4*opponent_moves)
+
+def my_moves_vs_opponent_score5(game, player):
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+    my_moves = len(game.get_legal_moves(player))
+    opponent_moves = len(game.get_legal_moves(game.get_opponent(player)))
+
+    return float(my_moves - 5*opponent_moves)
+
+def common_moves_heavy(game, player):
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+
+    my_moves = game.get_legal_moves(player)
+    opponent_moves = game.get_legal_moves(game.get_opponent(player))
+
+    common_moves = set(my_moves).intersection(set(opponent_moves))
+
+    return float(len(my_moves)-len(opponent_moves)+2*len(common_moves))
+
+def close_to_center(game,player):
+    my_moves = game.get_legal_moves(player)
+    closeIndex = float(sum([ pow(x-3+y-3,2) for (x,y) in my_moves ]))
+    return closeIndex
+
+def close_to_center2(game,player):
+    my_moves = game.get_legal_moves(player)
+    location = game.get_player_location(player)
+    opponent_moves = game.get_legal_moves(game.get_opponent(player))
+    v = (location[0]-3+location[1]-3)
+    rate = v*v
+
+    closeIndex = 10
+
+    if not rate == 0:
+        closeIndex = 10/rate
+
+    return float(closeIndex+len(my_moves)-len(opponent_moves))
+
+def close_to_oponent(game,player):
+    my_moves = game.get_legal_moves(player)
+    opponent = game.get_player_location(game.get_opponent(player))
+    closeIndex = float(sum([ pow(x-opponent[0]+y-opponent[1],2) for (x,y) in my_moves ]))
+    return closeIndex
+
+def close_to_oponent2(game,player):
+    my_moves = game.get_legal_moves(player)
+    opponent = game.get_player_location(game.get_opponent(player))
+    opponent_moves = game.get_legal_moves(game.get_opponent(player))
+
+    location = game.get_player_location(player)
+    v = (location[0]-opponent[0]+location[1]-opponent[1])
+    rate = v*v
+    close_index = 10
+
+    if not rate == 0:
+        close_index = 10/rate
+
+    return float(close_index+len(my_moves)-len(opponent_moves))
+
+def mixed_new(game,player):
+    my_moves = game.get_legal_moves(player)
+    opponent_moves = game.get_legal_moves(game.get_opponent(player))
+    edge = 4
+
+    if len(my_moves) > edge:
+        common_moves = set(my_moves).intersection(set(opponent_moves))
+
+        return float(len(my_moves) - len(opponent_moves) + len(common_moves))
+    else:
+        return float(len(my_moves) - 2 * len(opponent_moves))
+
+def mixed_new4(game,player):
+    my_moves = game.get_legal_moves(player)
+    opponent_moves = game.get_legal_moves(game.get_opponent(player))
+    edge = 4
+
+    if len(my_moves) > edge:
+        common_moves = set(my_moves).intersection(set(opponent_moves))
+
+        return float(len(my_moves) - len(opponent_moves) + len(common_moves))
+    else:
+        return float(len(my_moves) - 4 * len(opponent_moves))
+
 def custom_score(game, player):
     """Calculate the heuristic value of a game state from the point of view
     of the given player.
@@ -36,22 +185,7 @@ def custom_score(game, player):
         The heuristic value of the current game state to the specified player.
     """
 
-    def my_moves_score(game, player):
-        if game.is_loser(player):
-            return float("-inf")
-
-        if game.is_winner(player):
-            return float("inf")
-
-        my_moves = len(game.get_legal_moves(player))
-        return float(my_moves)
-
-    def my_moves_vs_opponent_score(game, player):
-        my_moves = len(game.get_legal_moves(player))
-        opponent_moves = len(game.get_legal_moves(game.get_opponent(player)))
-        return float(my_moves - opponent_moves)
-
-    return sample_players.improved_score(game, player)
+    pass
 
 class CustomPlayer:
     """Game-playing agent that chooses a move using your evaluation function
@@ -133,7 +267,6 @@ class CustomPlayer:
         # Perform any required initializations, including selecting an initial
         # move from the game board (i.e., an opening book), or returning
         # immediately if there are no legal moves
-
         method = getattr(self, self.method)
         best_move = (-1,-1)
 
@@ -144,7 +277,7 @@ class CustomPlayer:
             # when the timer gets close to expiring
 
             if self.iterative:
-                depth = 0
+                depth = 1
                 selected = [(float("-inf"),(-1,-1))]
 
                 while (True):
@@ -155,20 +288,17 @@ class CustomPlayer:
 
             else:
                 _,best_move = method(game,self.search_depth)
-                print("1:",best_move)
 
         except Timeout:
             # Handle any actions required at timeout, if necessary
             if self.iterative:
                 best_move = max(selected)[1]
-            print(best_move)
                 # Return the best move from the last completed search iteration
             return best_move
 
 
         if self.iterative:
             best_move = max(selected)[1]
-        print(best_move)
         # Return the best move from the last completed search iteration
         return best_move
 
@@ -210,8 +340,7 @@ class CustomPlayer:
             raise Timeout()
 
         path = []
-        score, path = self.minimax_aux(game, depth, path, maximizing_player)
-
+        score, path = self.minimax_max_value(game, depth, path)
         choose = path[0]
 
         if not maximizing_player:
@@ -219,31 +348,47 @@ class CustomPlayer:
 
         return score, choose
 
-    def minimax_aux(self, game, depth, path, maximizing_player=True):
+
+    def minimax_max_value(self, game, depth, path, maximizing_player=True):
+        if self.time_left() < self.TIMER_THRESHOLD:
+            raise Timeout()
+
+        if depth == 0:
+            return self.score(game, self), path
+
+        candidate = (float("-inf"), [(-1, -1)])
+        possible_moves = game.get_legal_moves(game.active_player)
+
+        for move in possible_moves:
+            forecast_game = game.forecast_move(move)
+
+            move_score = self.minimax_min_value(forecast_game, depth - 1, path,not maximizing_player)[0]
+
+            if move_score > candidate[0]:
+                candidate = (move_score, path + [move])
+
+        return candidate
+
+    def minimax_min_value(self, game, depth, path,maximizing_player=True):
 
         if self.time_left() < self.TIMER_THRESHOLD:
             raise Timeout()
 
+        if depth == 0:
+            return self.score(game, self), path
+
+        candidate = (float("inf"), [(-1, -1)])
         possible_moves = game.get_legal_moves(game.active_player)
 
-        if depth == 0 or not possible_moves:
-            if not path:
-                return float("-inf"), [(-1,-1)]
+        for move in possible_moves:
+            forecast_game = game.forecast_move(move)
 
+            move_score = self.minimax_max_value(forecast_game, depth - 1, path, not maximizing_player)[0]
 
-            if maximizing_player:
-                return self.score(game, game.active_player),path
-            else:
-                return self.score(game, game.inactive_player), path
-        else:
+            if move_score < candidate[0]:
+                candidate = (move_score, move)
 
-            search_in_childs = [self.minimax_aux(game.forecast_move(move), depth - 1, path+[move], not maximizing_player) for move in possible_moves]
-
-            if maximizing_player:
-                return max(search_in_childs)
-            else:
-                return min(search_in_childs)
-
+        return candidate
 
     def alphabeta(self, game, depth, alpha=float("-inf"), beta=float("inf"), maximizing_player=True):
         """Implement minimax search with alpha-beta pruning as described in the
@@ -287,7 +432,7 @@ class CustomPlayer:
             raise Timeout()
 
         path = []
-        value, path = self.alphabeta_max_value(game,depth, path)
+        value, path = self.alphabeta_max_value(game,depth, path, alpha, beta, maximizing_player)
 
         if len(path) == 0:
             return float("-inf"),(-1,-1)
@@ -302,7 +447,7 @@ class CustomPlayer:
             raise Timeout()
 
         if depth == 0:
-            return self.score(game, game.active_player), path
+            return self.score(game, self), path
 
         candidate = (float("-inf"), [(-1,-1)])
         possible_moves = game.get_legal_moves(game.active_player)
@@ -310,7 +455,7 @@ class CustomPlayer:
         for move in possible_moves:
             forecast_game = game.forecast_move(move)
 
-            move_score = self.alphabeta_min_value(forecast_game, depth-1, path, alpha, beta)[0]
+            move_score = self.alphabeta_min_value(forecast_game, depth-1, path, alpha, beta, not maximizing_player)[0]
 
             if move_score > candidate[0]:
                 candidate = (move_score, path+[move])
@@ -329,7 +474,7 @@ class CustomPlayer:
             raise Timeout()
 
         if depth == 0:
-            return self.score(game, game.active_player), path
+            return self.score(game, self), path
 
         candidate = (float("inf"),[(-1,-1)])
         possible_moves = game.get_legal_moves(game.active_player)
@@ -337,7 +482,7 @@ class CustomPlayer:
         for move in possible_moves:
             forecast_game = game.forecast_move(move)
 
-            move_score = self.alphabeta_max_value(forecast_game, depth - 1, path, alpha, beta)[0]
+            move_score = self.alphabeta_max_value(forecast_game, depth - 1, path, alpha, beta, not maximizing_player)[0]
 
             if move_score < candidate[0]:
                 candidate = (move_score,move)

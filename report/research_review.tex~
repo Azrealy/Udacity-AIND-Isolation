@@ -1,0 +1,108 @@
+%---------------------------------------------------------------------------------------
+% Configuracion de Documento
+%---------------------------------------------------------------------------------------
+\documentclass[10pt, a4paper,english]{article}
+
+\parindent=20pt
+\parskip=1pt
+\usepackage[width=15.5cm, left=3cm, top=0.5cm, height= 24.5cm]{geometry}
+
+% User package
+\usepackage{epigraph}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{fancyhdr}
+\usepackage[activeacute, spanish]{babel}
+\usepackage{cancel}
+\usepackage[utf8]{inputenc}
+%\usepackage{graphicx}
+\usepackage{algorithm}
+%\usepackage{algorithmic}
+%\usepackage{algorithm2e}
+\usepackage{algpseudocode}
+%\usepackage{afterpage}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{mathptmx}
+\usepackage{cite}
+\usepackage{pifont}
+\usepackage{float}
+
+
+\usepackage{color}     % para snipets de codigo coloreados
+\usepackage{xcolor}
+\usepackage{fancybox}  % para el sbox de los snipets de codigo
+
+
+	\usepackage[pdftex]{graphicx}
+	\usepackage{graphicx} %paquete para incluir imagenes
+
+	\usepackage{caption}
+	\usepackage{subcaption}
+
+
+\lstset{frame=tb,
+	  language=Java,
+	  aboveskip=3mm,
+	  belowskip=3mm,
+	  showstringspaces=false,
+	  columns=flexible,
+	  basicstyle={\scriptsize\ttfamily},
+	  numberstyle=\tiny\color{gray},
+	  keywordstyle=\color{blue},
+	  commentstyle=\color{green},
+	  stringstyle=\color{red},
+	  breaklines=true,
+	  breakatwhitespace=true,
+	  tabsize=3,
+	  numbers=left,
+	  numbersep=15pt,
+	  numberfirstline = false
+	}
+
+
+\pagestyle{fancy}
+
+\thispagestyle{fancy}
+
+\addtolength{\headheight}{1pt}
+
+\lhead{Build a Game-Playing Agent}
+
+\rhead{Udacity} % <--- Cambiar de acuerdo al tp actual
+
+\cfoot{\thepage /\pageref{LastPage}}
+
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Informacion del documento
+
+\author{\normalsize{Leticia Lorena Rodr\'iguez}}
+
+\date{\normalsize{February 14th, 2017}} % <--- Cambiar de acuerdo al tp actual
+
+\title{
+	\centering
+	\includegraphics[width=0.12\textwidth]{udacity-small.png}\\
+Build a Game-Playing Agent \\
+\large {Heuristic Analysis}
+} % <--- Cambiar de acuerdo al tp actual
+
+\renewcommand\thesection{\Roman{section}}
+\renewcommand\thesubsection{\thesection.\Roman{subsection}}
+
+\begin{document}
+\maketitle
+
+\section{Student evaluation functions description}
+
+
+
+\section{Student evaluation functions analysis}
+
+
+
+
+\end{document}

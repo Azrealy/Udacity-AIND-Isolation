@@ -1,0 +1,136 @@
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/my_test.py
+
+*************************
+Evaluating: Student mixed
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student mixed vs   Random    	Result: 75 to 5
+  Match 2: Student mixed vs   MM_Null   	Result: 73 to 7
+  Match 3: Student mixed vs   MM_Open   	Result: 57 to 23
+  Match 4: Student mixed vs MM_Improved 	Result: 58 to 22
+  Match 5: Student mixed vs   AB_Null   	Result: 67 to 13
+  Match 6: Student mixed vs   AB_Open   	Result: 55 to 25
+  Match 7: Student mixed vs AB_Improved 	Result: 45 to 35
+
+
+Results:
+----------
+Student mixed       76.79%
+
+*************************
+Evaluating: Student close_to_oponent
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student close_to_oponent vs   Random    	Result: 74 to 6
+  Match 2: Student close_to_oponent vs   MM_Null   	Result: 65 to 15
+  Match 3: Student close_to_oponent vs   MM_Open   	Result: 43 to 37
+/home/lety/workspace/Udacity-AIND-Isolation/tournament.py:99: UserWarning: One or more agents lost a match this round due to timeout. The get_move() function must return before time_left() reaches 0 ms. You will need to leave some time for the function to return, and may need to increase this margin to avoid timeouts during  tournament play.
+  warnings.warn(TIMEOUT_WARNING)
+  Match 4: Student close_to_oponent vs MM_Improved 	Result: 47 to 33
+  Match 5: Student close_to_oponent vs   AB_Null   	Result: 61 to 19
+  Match 6: Student close_to_oponent vs   AB_Open   	Result: 40 to 40
+  Match 7: Student close_to_oponent vs AB_Improved 	Result: 33 to 47
+
+
+Results:
+----------
+Student close_to_oponent     64.82%
+
+*************************
+Evaluating: Student Common Moves Heavy
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student Common Moves Heavy vs   Random    	Result: 79 to 1
+  Match 2: Student Common Moves Heavy vs   MM_Null   	Result: 66 to 14
+  Match 3: Student Common Moves Heavy vs   MM_Open   	Result: 47 to 33
+  Match 4: Student Common Moves Heavy vs MM_Improved 	Result: 45 to 35
+  Match 5: Student Common Moves Heavy vs   AB_Null   	Result: 66 to 14
+  Match 6: Student Common Moves Heavy vs   AB_Open   	Result: 40 to 40
+  Match 7: Student Common Moves Heavy vs AB_Improved 	Result: 42 to 38
+
+
+Results:
+----------
+Student Common Moves Heavy     68.75%
+
+*************************
+Evaluating: Student Close to center
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student Close to center vs   Random    	Result: 77 to 3
+  Match 2: Student Close to center vs   MM_Null   	Result: 70 to 10
+  Match 3: Student Close to center vs   MM_Open   	Result: 55 to 25
+  Match 4: Student Close to center vs MM_Improved 	Result: 38 to 42
+  Match 5: Student Close to center vs   AB_Null   	Result: 66 to 14
+  Match 6: Student Close to center vs   AB_Open   	Result: 44 to 36
+  Match 7: Student Close to center vs AB_Improved 	Result: 44 to 36
+
+
+Results:
+----------
+Student Close to center     70.36%
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 75 to 5
+  Match 2: ID_Improved vs   MM_Null   	Result: 75 to 5
+  Match 3: ID_Improved vs   MM_Open   	Result: 59 to 21
+  Match 4: ID_Improved vs MM_Improved 	Result: 57 to 23
+  Match 5: ID_Improved vs   AB_Null   	Result: 74 to 6
+  Match 6: ID_Improved vs   AB_Open   	Result: 56 to 24
+  Match 7: ID_Improved vs AB_Improved 	Result: 50 to 30
+
+
+Results:
+----------
+ID_Improved         79.64%
+
+*************************
+Evaluating: Student common_moves
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student common_moves vs   Random    	Result: 80 to 0
+  Match 2: Student common_moves vs   MM_Null   	Result: 70 to 10
+  Match 3: Student common_moves vs   MM_Open   	Result: 58 to 22
+  Match 4: Student common_moves vs MM_Improved 	Result: 53 to 27
+  Match 5: Student common_moves vs   AB_Null   	Result: 63 to 17
+  Match 6: Student common_moves vs   AB_Open   	Result: 51 to 29
+  Match 7: Student common_moves vs AB_Improved 	Result: 50 to 30
+
+
+Results:
+----------
+Student common_moves     75.89%
+
+*************************
+Evaluating: Student my_moves_vs_opponent_score
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student my_moves_vs_opponent_score vs   Random    	Result: 77 to 3
+  Match 2: Student my_moves_vs_opponent_score vs   MM_Null   	Result: 76 to 4
+  Match 3: Student my_moves_vs_opponent_score vs   MM_Open   	Result: 62 to 18
+  Match 4: Student my_moves_vs_opponent_score vs MM_Improved 	Result: 61 to 19
+  Match 5: Student my_moves_vs_opponent_score vs   AB_Null   	Result: 65 to 15
+  Match 6: Student my_moves_vs_opponent_score vs   AB_Open   	Result: 52 to 28
+  Match 7: Student my_moves_vs_opponent_score vs AB_Improved 	Result: 52 to 28
+
+
+Results:
+----------
+Student my_moves_vs_opponent_score     79.46%

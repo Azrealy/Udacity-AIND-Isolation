@@ -1,0 +1,136 @@
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/my_test.py
+
+*************************
+Evaluating: Student mixed new4
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student mixed new4 vs   Random    	Result: 79 to 1
+  Match 2: Student mixed new4 vs   MM_Null   	Result: 75 to 5
+  Match 3: Student mixed new4 vs   MM_Open   	Result: 65 to 15
+  Match 4: Student mixed new4 vs MM_Improved 	Result: 64 to 16
+  Match 5: Student mixed new4 vs   AB_Null   	Result: 74 to 6
+  Match 6: Student mixed new4 vs   AB_Open   	Result: 57 to 23
+  Match 7: Student mixed new4 vs AB_Improved 	Result: 46 to 34
+
+
+Results:
+----------
+Student mixed new4     82.14%
+
+*************************
+Evaluating: Student my_moves_vs_opponent_score3
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student my_moves_vs_opponent_score3 vs   Random    	Result: 79 to 1
+  Match 2: Student my_moves_vs_opponent_score3 vs   MM_Null   	Result: 79 to 1
+  Match 3: Student my_moves_vs_opponent_score3 vs   MM_Open   	Result: 62 to 18
+  Match 4: Student my_moves_vs_opponent_score3 vs MM_Improved 	Result: 61 to 19
+  Match 5: Student my_moves_vs_opponent_score3 vs   AB_Null   	Result: 73 to 7
+  Match 6: Student my_moves_vs_opponent_score3 vs   AB_Open   	Result: 56 to 24
+  Match 7: Student my_moves_vs_opponent_score3 vs AB_Improved 	Result: 53 to 27
+
+
+Results:
+----------
+Student my_moves_vs_opponent_score3     82.68%
+
+*************************
+Evaluating: Student my_moves_vs_opponent_score4
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student my_moves_vs_opponent_score4 vs   Random    	Result: 78 to 2
+  Match 2: Student my_moves_vs_opponent_score4 vs   MM_Null   	Result: 73 to 7
+  Match 3: Student my_moves_vs_opponent_score4 vs   MM_Open   	Result: 58 to 22
+  Match 4: Student my_moves_vs_opponent_score4 vs MM_Improved 	Result: 63 to 17
+  Match 5: Student my_moves_vs_opponent_score4 vs   AB_Null   	Result: 71 to 9
+  Match 6: Student my_moves_vs_opponent_score4 vs   AB_Open   	Result: 53 to 27
+  Match 7: Student my_moves_vs_opponent_score4 vs AB_Improved 	Result: 43 to 37
+
+
+Results:
+----------
+Student my_moves_vs_opponent_score4     78.39%
+
+*************************
+Evaluating: Student my_moves_vs_opponent_score5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student my_moves_vs_opponent_score5 vs   Random    	Result: 78 to 2
+  Match 2: Student my_moves_vs_opponent_score5 vs   MM_Null   	Result: 73 to 7
+  Match 3: Student my_moves_vs_opponent_score5 vs   MM_Open   	Result: 71 to 9
+  Match 4: Student my_moves_vs_opponent_score5 vs MM_Improved 	Result: 64 to 16
+  Match 5: Student my_moves_vs_opponent_score5 vs   AB_Null   	Result: 65 to 15
+  Match 6: Student my_moves_vs_opponent_score5 vs   AB_Open   	Result: 59 to 21
+  Match 7: Student my_moves_vs_opponent_score5 vs AB_Improved 	Result: 56 to 24
+
+
+Results:
+----------
+Student my_moves_vs_opponent_score5     83.21%
+
+*************************
+Evaluating: Student mixed new
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student mixed new vs   Random    	Result: 78 to 2
+  Match 2: Student mixed new vs   MM_Null   	Result: 74 to 6
+  Match 3: Student mixed new vs   MM_Open   	Result: 67 to 13
+  Match 4: Student mixed new vs MM_Improved 	Result: 62 to 18
+  Match 5: Student mixed new vs   AB_Null   	Result: 65 to 15
+  Match 6: Student mixed new vs   AB_Open   	Result: 53 to 27
+  Match 7: Student mixed new vs AB_Improved 	Result: 48 to 32
+
+
+Results:
+----------
+Student mixed new     79.82%
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 75 to 5
+  Match 2: ID_Improved vs   MM_Null   	Result: 76 to 4
+  Match 3: ID_Improved vs   MM_Open   	Result: 63 to 17
+  Match 4: ID_Improved vs MM_Improved 	Result: 57 to 23
+  Match 5: ID_Improved vs   AB_Null   	Result: 74 to 6
+  Match 6: ID_Improved vs   AB_Open   	Result: 56 to 24
+  Match 7: ID_Improved vs AB_Improved 	Result: 60 to 20
+
+
+Results:
+----------
+ID_Improved         82.32%
+
+*************************
+Evaluating: Student common_moves
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student common_moves vs   Random    	Result: 79 to 1
+  Match 2: Student common_moves vs   MM_Null   	Result: 74 to 6
+  Match 3: Student common_moves vs   MM_Open   	Result: 60 to 20
+  Match 4: Student common_moves vs MM_Improved 	Result: 56 to 24
+  Match 5: Student common_moves vs   AB_Null   	Result: 68 to 12
+  Match 6: Student common_moves vs   AB_Open   	Result: 52 to 28
+  Match 7: Student common_moves vs AB_Improved 	Result: 49 to 31
+
+
+Results:
+----------
+Student common_moves     78.21%
+
+Process finished with exit code 0

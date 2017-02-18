@@ -1,0 +1,117 @@
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/my_test.py
+
+*************************
+Evaluating: Student close_to_oponent
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student close_to_oponent vs   Random    	Result: 72 to 8
+  Match 2: Student close_to_oponent vs   MM_Null   	Result: 63 to 17
+  Match 3: Student close_to_oponent vs   MM_Open   	Result: 53 to 27
+  Match 4: Student close_to_oponent vs MM_Improved 	Result: 40 to 40
+  Match 5: Student close_to_oponent vs   AB_Null   	Result: 61 to 19
+  Match 6: Student close_to_oponent vs   AB_Open   	Result: 45 to 35
+  Match 7: Student close_to_oponent vs AB_Improved 	Result: 38 to 42
+
+
+Results:
+----------
+Student close_to_oponent     66.43%
+
+*************************
+Evaluating: Student Common Moves Heavy
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student Common Moves Heavy vs   Random    	Result: 74 to 6
+  Match 2: Student Common Moves Heavy vs   MM_Null   	Result: 69 to 11
+  Match 3: Student Common Moves Heavy vs   MM_Open   	Result: 50 to 30
+  Match 4: Student Common Moves Heavy vs MM_Improved 	Result: 50 to 30
+  Match 5: Student Common Moves Heavy vs   AB_Null   	Result: 61 to 19
+  Match 6: Student Common Moves Heavy vs   AB_Open   	Result: 42 to 38
+  Match 7: Student Common Moves Heavy vs AB_Improved 	Result: 40 to 40
+
+
+Results:
+----------
+Student Common Moves Heavy     68.93%
+
+*************************
+Evaluating: Student Close to center
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student Close to center vs   Random    	Result: 78 to 2
+  Match 2: Student Close to center vs   MM_Null   	Result: 69 to 11
+  Match 3: Student Close to center vs   MM_Open   	Result: 52 to 28
+  Match 4: Student Close to center vs MM_Improved 	Result: 48 to 32
+  Match 5: Student Close to center vs   AB_Null   	Result: 64 to 16
+  Match 6: Student Close to center vs   AB_Open   	Result: 40 to 40
+  Match 7: Student Close to center vs AB_Improved 	Result: 45 to 35
+
+
+Results:
+----------
+Student Close to center     70.71%
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 79 to 1
+  Match 2: ID_Improved vs   MM_Null   	Result: 75 to 5
+  Match 3: ID_Improved vs   MM_Open   	Result: 61 to 19
+  Match 4: ID_Improved vs MM_Improved 	Result: 60 to 20
+  Match 5: ID_Improved vs   AB_Null   	Result: 72 to 8
+  Match 6: ID_Improved vs   AB_Open   	Result: 50 to 30
+  Match 7: ID_Improved vs AB_Improved 	Result: 47 to 33
+
+
+Results:
+----------
+ID_Improved         79.29%
+
+*************************
+Evaluating: Student common_moves
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student common_moves vs   Random    	Result: 80 to 0
+  Match 2: Student common_moves vs   MM_Null   	Result: 71 to 9
+  Match 3: Student common_moves vs   MM_Open   	Result: 60 to 20
+  Match 4: Student common_moves vs MM_Improved 	Result: 55 to 25
+  Match 5: Student common_moves vs   AB_Null   	Result: 72 to 8
+  Match 6: Student common_moves vs   AB_Open   	Result: 44 to 36
+  Match 7: Student common_moves vs AB_Improved 	Result: 49 to 31
+
+
+Results:
+----------
+Student common_moves     76.96%
+
+*************************
+Evaluating: Student my_moves_vs_opponent_score
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student my_moves_vs_opponent_score vs   Random    	Result: 76 to 4
+  Match 2: Student my_moves_vs_opponent_score vs   MM_Null   	Result: 74 to 6
+  Match 3: Student my_moves_vs_opponent_score vs   MM_Open   	Result: 67 to 13
+  Match 4: Student my_moves_vs_opponent_score vs MM_Improved 	Result: 60 to 20
+  Match 5: Student my_moves_vs_opponent_score vs   AB_Null   	Result: 68 to 12
+  Match 6: Student my_moves_vs_opponent_score vs   AB_Open   	Result: 57 to 23
+  Match 7: Student my_moves_vs_opponent_score vs AB_Improved 	Result: 53 to 27
+
+
+Results:
+----------
+Student my_moves_vs_opponent_score     81.25%
+
+Process finished with exit code 0
