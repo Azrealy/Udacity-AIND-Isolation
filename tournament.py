@@ -30,7 +30,8 @@ from sample_players import RandomPlayer
 from sample_players import null_score
 from sample_players import open_move_score
 from sample_players import improved_score
-from game_agent import *
+from game_agent import CustomPlayer
+from game_agent import custom_score
 
 NUM_MATCHES = 5  # number of matches against each opponent
 TIME_LIMIT = 150  # number of milliseconds before timeout

@@ -87,7 +87,7 @@
 	\centering
 	\includegraphics[width=0.12\textwidth]{udacity-small.png}\\
 Build a Game-Playing Agent \\
-\large {Heuristic Analysis}
+\large {Research Review}
 } % <--- Cambiar de acuerdo al tp actual
 
 \renewcommand\thesection{\Roman{section}}
@@ -96,11 +96,11 @@ Build a Game-Playing Agent \\
 \begin{document}
 \maketitle
 
-\section{Student evaluation functions description}
+\section{Goals or techiniques introduced}
 
 
 
-\section{Student evaluation functions analysis}
+\section{Paper results}
 
 
 

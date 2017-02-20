@@ -1,0 +1,271 @@
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/heuristic1.py
+
+*************************
+Evaluating: Student MyMovesVsOpponent0
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent0 vs   Random    	Result: 383 to 17
+  Match 2: Student MyMovesVsOpponent0 vs   MM_Null   	Result: 373 to 27
+  Match 3: Student MyMovesVsOpponent0 vs   MM_Open   	Result: 272 to 128
+/home/lety/workspace/Udacity-AIND-Isolation/tournament.py:100: UserWarning: One or more agents lost a match this round due to timeout. The get_move() function must return before time_left() reaches 0 ms. You will need to leave some time for the function to return, and may need to increase this margin to avoid timeouts during  tournament play.
+  warnings.warn(TIMEOUT_WARNING)
+  Match 4: Student MyMovesVsOpponent0 vs MM_Improved 	Result: 269 to 131
+  Match 5: Student MyMovesVsOpponent0 vs   AB_Null   	Result: 345 to 55
+  Match 6: Student MyMovesVsOpponent0 vs   AB_Open   	Result: 256 to 144
+  Match 7: Student MyMovesVsOpponent0 vs AB_Improved 	Result: 235 to 165
+
+
+Results:
+----------
+Student MyMovesVsOpponent0     76.18%
+
+*************************
+Evaluating: Student MyMovesVsOpponent0.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent0.5 vs   Random    	Result: 385 to 15
+  Match 2: Student MyMovesVsOpponent0.5 vs   MM_Null   	Result: 372 to 28
+  Match 3: Student MyMovesVsOpponent0.5 vs   MM_Open   	Result: 283 to 117
+  Match 4: Student MyMovesVsOpponent0.5 vs MM_Improved 	Result: 284 to 116
+  Match 5: Student MyMovesVsOpponent0.5 vs   AB_Null   	Result: 347 to 53
+  Match 6: Student MyMovesVsOpponent0.5 vs   AB_Open   	Result: 259 to 141
+  Match 7: Student MyMovesVsOpponent0.5 vs AB_Improved 	Result: 221 to 179
+
+
+Results:
+----------
+Student MyMovesVsOpponent0.5     76.82%
+
+*************************
+Evaluating: Student MyMovesVsOpponent1
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent1 vs   Random    	Result: 390 to 10
+  Match 2: Student MyMovesVsOpponent1 vs   MM_Null   	Result: 368 to 32
+  Match 3: Student MyMovesVsOpponent1 vs   MM_Open   	Result: 297 to 103
+  Match 4: Student MyMovesVsOpponent1 vs MM_Improved 	Result: 291 to 109
+  Match 5: Student MyMovesVsOpponent1 vs   AB_Null   	Result: 340 to 60
+  Match 6: Student MyMovesVsOpponent1 vs   AB_Open   	Result: 274 to 126
+  Match 7: Student MyMovesVsOpponent1 vs AB_Improved 	Result: 257 to 143
+
+
+Results:
+----------
+Student MyMovesVsOpponent1     79.18%
+
+*************************
+Evaluating: Student MyMovesVsOpponent1.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent1.5 vs   Random    	Result: 383 to 17
+  Match 2: Student MyMovesVsOpponent1.5 vs   MM_Null   	Result: 378 to 22
+  Match 3: Student MyMovesVsOpponent1.5 vs   MM_Open   	Result: 308 to 92
+  Match 4: Student MyMovesVsOpponent1.5 vs MM_Improved 	Result: 301 to 99
+  Match 5: Student MyMovesVsOpponent1.5 vs   AB_Null   	Result: 351 to 49
+  Match 6: Student MyMovesVsOpponent1.5 vs   AB_Open   	Result: 262 to 138
+  Match 7: Student MyMovesVsOpponent1.5 vs AB_Improved 	Result: 242 to 158
+
+
+Results:
+----------
+Student MyMovesVsOpponent1.5     79.46%
+
+*************************
+Evaluating: Student MyMovesVsOpponent2
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent2 vs   Random    	Result: 378 to 22
+  Match 2: Student MyMovesVsOpponent2 vs   MM_Null   	Result: 372 to 28
+  Match 3: Student MyMovesVsOpponent2 vs   MM_Open   	Result: 302 to 98
+  Match 4: Student MyMovesVsOpponent2 vs MM_Improved 	Result: 305 to 95
+  Match 5: Student MyMovesVsOpponent2 vs   AB_Null   	Result: 347 to 53
+  Match 6: Student MyMovesVsOpponent2 vs   AB_Open   	Result: 274 to 126
+  Match 7: Student MyMovesVsOpponent2 vs AB_Improved 	Result: 261 to 139
+
+
+Results:
+----------
+Student MyMovesVsOpponent2     79.96%
+
+*************************
+Evaluating: Student MyMovesVsOpponent2.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent2.5 vs   Random    	Result: 384 to 16
+  Match 2: Student MyMovesVsOpponent2.5 vs   MM_Null   	Result: 369 to 31
+  Match 3: Student MyMovesVsOpponent2.5 vs   MM_Open   	Result: 314 to 86
+  Match 4: Student MyMovesVsOpponent2.5 vs MM_Improved 	Result: 294 to 106
+  Match 5: Student MyMovesVsOpponent2.5 vs   AB_Null   	Result: 354 to 46
+  Match 6: Student MyMovesVsOpponent2.5 vs   AB_Open   	Result: 265 to 135
+  Match 7: Student MyMovesVsOpponent2.5 vs AB_Improved 	Result: 255 to 145
+
+
+Results:
+----------
+Student MyMovesVsOpponent2.5     79.82%
+
+*************************
+Evaluating: Student MyMovesVsOpponent3
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent3 vs   Random    	Result: 390 to 10
+  Match 2: Student MyMovesVsOpponent3 vs   MM_Null   	Result: 379 to 21
+  Match 3: Student MyMovesVsOpponent3 vs   MM_Open   	Result: 313 to 87
+  Match 4: Student MyMovesVsOpponent3 vs MM_Improved 	Result: 290 to 110
+  Match 5: Student MyMovesVsOpponent3 vs   AB_Null   	Result: 351 to 49
+  Match 6: Student MyMovesVsOpponent3 vs   AB_Open   	Result: 281 to 119
+  Match 7: Student MyMovesVsOpponent3 vs AB_Improved 	Result: 246 to 154
+
+
+Results:
+----------
+Student MyMovesVsOpponent3     80.36%
+
+*************************
+Evaluating: Student MyMovesVsOpponent3.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent3.5 vs   Random    	Result: 386 to 14
+  Match 2: Student MyMovesVsOpponent3.5 vs   MM_Null   	Result: 367 to 33
+  Match 3: Student MyMovesVsOpponent3.5 vs   MM_Open   	Result: 320 to 80
+  Match 4: Student MyMovesVsOpponent3.5 vs MM_Improved 	Result: 298 to 102
+  Match 5: Student MyMovesVsOpponent3.5 vs   AB_Null   	Result: 351 to 49
+  Match 6: Student MyMovesVsOpponent3.5 vs   AB_Open   	Result: 264 to 136
+  Match 7: Student MyMovesVsOpponent3.5 vs AB_Improved 	Result: 252 to 148
+
+
+Results:
+----------
+Student MyMovesVsOpponent3.5     79.93%
+
+*************************
+Evaluating: Student MyMovesVsOpponent4
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent4 vs   Random    	Result: 385 to 15
+  Match 2: Student MyMovesVsOpponent4 vs   MM_Null   	Result: 378 to 22
+  Match 3: Student MyMovesVsOpponent4 vs   MM_Open   	Result: 321 to 79
+  Match 4: Student MyMovesVsOpponent4 vs MM_Improved 	Result: 305 to 95
+  Match 5: Student MyMovesVsOpponent4 vs   AB_Null   	Result: 339 to 61
+  Match 6: Student MyMovesVsOpponent4 vs   AB_Open   	Result: 266 to 134
+  Match 7: Student MyMovesVsOpponent4 vs AB_Improved 	Result: 243 to 157
+
+
+Results:
+----------
+Student MyMovesVsOpponent4     79.89%
+
+*************************
+Evaluating: Student MyMovesVsOpponent4.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent4.5 vs   Random    	Result: 382 to 18
+  Match 2: Student MyMovesVsOpponent4.5 vs   MM_Null   	Result: 372 to 28
+  Match 3: Student MyMovesVsOpponent4.5 vs   MM_Open   	Result: 312 to 88
+  Match 4: Student MyMovesVsOpponent4.5 vs MM_Improved 	Result: 299 to 101
+  Match 5: Student MyMovesVsOpponent4.5 vs   AB_Null   	Result: 349 to 51
+  Match 6: Student MyMovesVsOpponent4.5 vs   AB_Open   	Result: 269 to 131
+  Match 7: Student MyMovesVsOpponent4.5 vs AB_Improved 	Result: 240 to 160
+
+
+Results:
+----------
+Student MyMovesVsOpponent4.5     79.39%
+
+*************************
+Evaluating: Student MyMovesVsOpponent5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent5 vs   Random    	Result: 384 to 16
+  Match 2: Student MyMovesVsOpponent5 vs   MM_Null   	Result: 370 to 30
+  Match 3: Student MyMovesVsOpponent5 vs   MM_Open   	Result: 314 to 86
+  Match 4: Student MyMovesVsOpponent5 vs MM_Improved 	Result: 296 to 104
+  Match 5: Student MyMovesVsOpponent5 vs   AB_Null   	Result: 341 to 59
+  Match 6: Student MyMovesVsOpponent5 vs   AB_Open   	Result: 278 to 122
+  Match 7: Student MyMovesVsOpponent5 vs AB_Improved 	Result: 232 to 168
+
+
+Results:
+----------
+Student MyMovesVsOpponent5     79.11%
+
+*************************
+Evaluating: Student MyMovesVsOpponent5.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent5.5 vs   Random    	Result: 373 to 27
+  Match 2: Student MyMovesVsOpponent5.5 vs   MM_Null   	Result: 373 to 27
+  Match 3: Student MyMovesVsOpponent5.5 vs   MM_Open   	Result: 320 to 80
+  Match 4: Student MyMovesVsOpponent5.5 vs MM_Improved 	Result: 302 to 98
+  Match 5: Student MyMovesVsOpponent5.5 vs   AB_Null   	Result: 352 to 48
+  Match 6: Student MyMovesVsOpponent5.5 vs   AB_Open   	Result: 257 to 143
+  Match 7: Student MyMovesVsOpponent5.5 vs AB_Improved 	Result: 258 to 142
+
+
+Results:
+----------
+Student MyMovesVsOpponent5.5     79.82%
+
+*************************
+Evaluating: Student MyMovesVsOpponent6
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent6 vs   Random    	Result: 382 to 18
+  Match 2: Student MyMovesVsOpponent6 vs   MM_Null   	Result: 374 to 26
+  Match 3: Student MyMovesVsOpponent6 vs   MM_Open   	Result: 326 to 74
+  Match 4: Student MyMovesVsOpponent6 vs MM_Improved 	Result: 299 to 101
+  Match 5: Student MyMovesVsOpponent6 vs   AB_Null   	Result: 354 to 46
+  Match 6: Student MyMovesVsOpponent6 vs   AB_Open   	Result: 261 to 139
+  Match 7: Student MyMovesVsOpponent6 vs AB_Improved 	Result: 251 to 149
+
+
+Results:
+----------
+Student MyMovesVsOpponent6     80.25%
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 394 to 6
+  Match 2: ID_Improved vs   MM_Null   	Result: 369 to 31
+  Match 3: ID_Improved vs   MM_Open   	Result: 306 to 94
+  Match 4: ID_Improved vs MM_Improved 	Result: 289 to 111
+  Match 5: ID_Improved vs   AB_Null   	Result: 339 to 61
+  Match 6: ID_Improved vs   AB_Open   	Result: 275 to 125
+  Match 7: ID_Improved vs AB_Improved 	Result: 249 to 151
+
+
+Results:
+----------
+ID_Improved         79.32%
+
+Process finished with exit code 0

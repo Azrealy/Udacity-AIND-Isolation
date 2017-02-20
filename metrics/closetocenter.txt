@@ -1,0 +1,41 @@
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/my_test.py
+
+*************************
+Evaluating: Student CloseToCenter
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student CloseToCenter vs   Random    	Result: 380 to 20
+  Match 2: Student CloseToCenter vs   MM_Null   	Result: 354 to 46
+  Match 3: Student CloseToCenter vs   MM_Open   	Result: 270 to 130
+  Match 4: Student CloseToCenter vs MM_Improved 	Result: 240 to 160
+  Match 5: Student CloseToCenter vs   AB_Null   	Result: 300 to 100
+  Match 6: Student CloseToCenter vs   AB_Open   	Result: 237 to 163
+  Match 7: Student CloseToCenter vs AB_Improved 	Result: 210 to 190
+
+
+Results:
+----------
+Student CloseToCenter     71.11%
+
+*************************
+Evaluating: Student CloseToCenter2
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student CloseToCenter2 vs   Random    	Result: 379 to 21
+  Match 2: Student CloseToCenter2 vs   MM_Null   	Result: 370 to 30
+  Match 3: Student CloseToCenter2 vs   MM_Open   	Result: 296 to 104
+  Match 4: Student CloseToCenter2 vs MM_Improved 	Result: 279 to 121
+  Match 5: Student CloseToCenter2 vs   AB_Null   	Result: 356 to 44
+  Match 6: Student CloseToCenter2 vs   AB_Open   	Result: 242 to 158
+  Match 7: Student CloseToCenter2 vs AB_Improved 	Result: 227 to 173
+
+
+Results:
+----------
+Student CloseToCenter2     76.75%
+
+Process finished with exit code 0

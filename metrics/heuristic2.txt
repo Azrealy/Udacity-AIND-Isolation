@@ -1,0 +1,159 @@
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/heuristic2.py
+
+*************************
+Evaluating: Student CommonMoves 1
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student CommonMoves 1 vs   Random    	Result: 386 to 14
+  Match 2: Student CommonMoves 1 vs   MM_Null   	Result: 366 to 34
+  Match 3: Student CommonMoves 1 vs   MM_Open   	Result: 301 to 99
+  Match 4: Student CommonMoves 1 vs MM_Improved 	Result: 280 to 120
+  Match 5: Student CommonMoves 1 vs   AB_Null   	Result: 332 to 68
+  Match 6: Student CommonMoves 1 vs   AB_Open   	Result: 264 to 136
+  Match 7: Student CommonMoves 1 vs AB_Improved 	Result: 245 to 155
+
+
+Results:
+----------
+Student CommonMoves 1     77.64%
+
+*************************
+Evaluating: Student CommonMoves 2
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student CommonMoves 2 vs   Random    	Result: 384 to 16
+  Match 2: Student CommonMoves 2 vs   MM_Null   	Result: 364 to 36
+  Match 3: Student CommonMoves 2 vs   MM_Open   	Result: 257 to 143
+  Match 4: Student CommonMoves 2 vs MM_Improved 	Result: 259 to 141
+  Match 5: Student CommonMoves 2 vs   AB_Null   	Result: 337 to 63
+  Match 6: Student CommonMoves 2 vs   AB_Open   	Result: 260 to 140
+  Match 7: Student CommonMoves 2 vs AB_Improved 	Result: 235 to 165
+
+
+Results:
+----------
+Student CommonMoves 2     74.86%
+
+*************************
+Evaluating: Student CommonMoves 3
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student CommonMoves 3 vs   Random    	Result: 379 to 21
+  Match 2: Student CommonMoves 3 vs   MM_Null   	Result: 364 to 36
+  Match 3: Student CommonMoves 3 vs   MM_Open   	Result: 261 to 139
+  Match 4: Student CommonMoves 3 vs MM_Improved 	Result: 247 to 153
+  Match 5: Student CommonMoves 3 vs   AB_Null   	Result: 332 to 68
+  Match 6: Student CommonMoves 3 vs   AB_Open   	Result: 239 to 161
+  Match 7: Student CommonMoves 3 vs AB_Improved 	Result: 223 to 177
+
+
+Results:
+----------
+Student CommonMoves 3     73.04%
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 381 to 19
+  Match 2: ID_Improved vs   MM_Null   	Result: 375 to 25
+  Match 3: ID_Improved vs   MM_Open   	Result: 290 to 110
+  Match 4: ID_Improved vs MM_Improved 	Result: 297 to 103
+  Match 5: ID_Improved vs   AB_Null   	Result: 349 to 51
+  Match 6: ID_Improved vs   AB_Open   	Result: 263 to 137
+  Match 7: ID_Improved vs AB_Improved 	Result: 254 to 146
+
+
+Results:
+----------
+ID_Improved         78.89%
+
+Process finished with exit code 0
+
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/heuristic2.py
+
+*************************
+Evaluating: Student CommonMoves 1
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student CommonMoves 1 vs   Random    	Result: 97 to 3
+  Match 2: Student CommonMoves 1 vs   MM_Null   	Result: 98 to 2
+  Match 3: Student CommonMoves 1 vs   MM_Open   	Result: 76 to 24
+  Match 4: Student CommonMoves 1 vs MM_Improved 	Result: 69 to 31
+  Match 5: Student CommonMoves 1 vs   AB_Null   	Result: 88 to 12
+  Match 6: Student CommonMoves 1 vs   AB_Open   	Result: 71 to 29
+  Match 7: Student CommonMoves 1 vs AB_Improved 	Result: 65 to 35
+
+
+Results:
+----------
+Student CommonMoves -1     80.57%
+
+*************************
+Evaluating: Student CommonMoves 2
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student CommonMoves 2 vs   Random    	Result: 94 to 6
+  Match 2: Student CommonMoves 2 vs   MM_Null   	Result: 91 to 9
+  Match 3: Student CommonMoves 2 vs   MM_Open   	Result: 71 to 29
+  Match 4: Student CommonMoves 2 vs MM_Improved 	Result: 74 to 26
+  Match 5: Student CommonMoves 2 vs   AB_Null   	Result: 85 to 15
+  Match 6: Student CommonMoves 2 vs   AB_Open   	Result: 73 to 27
+  Match 7: Student CommonMoves 2 vs AB_Improved 	Result: 64 to 36
+
+
+Results:
+----------
+Student CommonMoves -2     78.86%
+
+*************************
+Evaluating: Student CommonMoves 3
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student CommonMoves 3 vs   Random    	Result: 96 to 4
+  Match 2: Student CommonMoves 3 vs   MM_Null   	Result: 95 to 5
+  Match 3: Student CommonMoves 3 vs   MM_Open   	Result: 78 to 22
+  Match 4: Student CommonMoves 3 vs MM_Improved 	Result: 72 to 28
+  Match 5: Student CommonMoves 3 vs   AB_Null   	Result: 89 to 11
+  Match 6: Student CommonMoves 3 vs   AB_Open   	Result: 71 to 29
+  Match 7: Student CommonMoves 3 vs AB_Improved 	Result: 64 to 36
+
+
+Results:
+----------
+Student CommonMoves -3     80.71%
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 98 to 2
+  Match 2: ID_Improved vs   MM_Null   	Result: 99 to 1
+  Match 3: ID_Improved vs   MM_Open   	Result: 79 to 21
+  Match 4: ID_Improved vs MM_Improved 	Result: 76 to 24
+  Match 5: ID_Improved vs   AB_Null   	Result: 86 to 14
+  Match 6: ID_Improved vs   AB_Open   	Result: 65 to 35
+  Match 7: ID_Improved vs AB_Improved 	Result: 56 to 44
+
+
+Results:
+----------
+ID_Improved         79.86%
+
+Process finished with exit code 0

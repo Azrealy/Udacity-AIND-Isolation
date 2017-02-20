@@ -1,6 +1,7 @@
 import tournament
+import game_agent
 
-NUM_MATCHES = 20  # number of matches against each opponent
+NUM_MATCHES = 100  # number of matches against each opponent
 
 def main():
 
@@ -29,8 +30,39 @@ def main():
     # faster or slower computers.
     test_agents = []
 
-    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.game_start, **CUSTOM_ARGS),
-                                        "Student GameStart"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves0, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent0"))
+
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves0_5, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent0.5"))
+
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves1, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent1"))
+
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves1_5, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent1.5"))
+
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves2, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent2"))
+
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves2_5, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent2.5"))
+
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves3, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent3"))
+
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves3_5, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent3.5"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves4, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent4"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves4_5, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent4.5"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves5, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent5"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves5_5, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent5.5"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.my_moves_vs_opponent_moves6, **CUSTOM_ARGS),
+                                        "Student MyMovesVsOpponent6"))
     test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.improved_score, **CUSTOM_ARGS), "ID_Improved"))
 
     iterations = 10
