@@ -95,15 +95,36 @@ def common_moves2(game,player):
 def common_moves3(game,player):
     return common_moves(game,player,-3.)
 
+def game_start2(game,player):
+    return game_start(game,player,2)
 
-def game_start(game, player):
+def game_start3(game,player):
+    return game_start(game,player,3)
+
+def game_start4(game,player):
+    return game_start(game,player,4)
+
+def game_start5(game,player):
+    return game_start(game,player,5)
+
+def game_start6(game,player):
+    return game_start(game,player,6)
+
+def game_start7(game,player):
+    return game_start(game,player,7)
+
+
+def game_start2(game,player):
+    return game_start(game,player)
+
+def game_start(game, player, factor=2):
     if game.is_loser(player):
         return float("-inf")
 
     if game.is_winner(player):
         return float("inf")
 
-    if (game.move_count < 6):
+    if (game.move_count < factor):
         location = game.get_player_location(player)
         opponent_moves = game.get_legal_moves(game.get_opponent(player))
 

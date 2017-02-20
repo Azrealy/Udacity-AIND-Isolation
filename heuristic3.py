@@ -30,10 +30,21 @@ def main():
     # faster or slower computers.
     test_agents = []
 
-    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.game_start, **CUSTOM_ARGS),
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.game_start2, **CUSTOM_ARGS),
+                                        "Student GameStart"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.game_start3, **CUSTOM_ARGS),
+                                        "Student GameStart"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.game_start4, **CUSTOM_ARGS),
+                                        "Student GameStart"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.game_start5, **CUSTOM_ARGS),
+                                        "Student GameStart"))
+    #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.game_start6, **CUSTOM_ARGS),
+    #                                    "Student GameStart"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.game_start7, **CUSTOM_ARGS),
                                         "Student GameStart"))
 
-    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.improved_score, **CUSTOM_ARGS), "ID_Improved"))
+
+    #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.improved_score, **CUSTOM_ARGS), "ID_Improved"))
 
     iterations = 10
 

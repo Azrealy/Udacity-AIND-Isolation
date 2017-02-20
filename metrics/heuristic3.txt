@@ -1,0 +1,117 @@
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/heuristic3.py
+
+*************************
+Evaluating: Student GameStart
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student GameStart vs   Random    	Result: 155 to 5
+  Match 2: Student GameStart vs   MM_Null   	Result: 145 to 15
+  Match 3: Student GameStart vs   MM_Open   	Result: 130 to 30
+  Match 4: Student GameStart vs MM_Improved 	Result: 123 to 37
+  Match 5: Student GameStart vs   AB_Null   	Result: 134 to 26
+  Match 6: Student GameStart vs   AB_Open   	Result: 102 to 58
+  Match 7: Student GameStart vs AB_Improved 	Result: 101 to 59
+
+
+Results:
+----------
+Student GameStart  2   79.46%
+
+*************************
+Evaluating: Student GameStart
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student GameStart vs   Random    	Result: 158 to 2
+  Match 2: Student GameStart vs   MM_Null   	Result: 148 to 12
+  Match 3: Student GameStart vs   MM_Open   	Result: 124 to 36
+  Match 4: Student GameStart vs MM_Improved 	Result: 116 to 44
+  Match 5: Student GameStart vs   AB_Null   	Result: 144 to 16
+  Match 6: Student GameStart vs   AB_Open   	Result: 107 to 53
+  Match 7: Student GameStart vs AB_Improved 	Result: 103 to 57
+
+
+Results:
+----------
+Student GameStart  3   80.36%
+
+*************************
+Evaluating: Student GameStart
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student GameStart vs   Random    	Result: 154 to 6
+  Match 2: Student GameStart vs   MM_Null   	Result: 151 to 9
+  Match 3: Student GameStart vs   MM_Open   	Result: 123 to 37
+  Match 4: Student GameStart vs MM_Improved 	Result: 114 to 46
+  Match 5: Student GameStart vs   AB_Null   	Result: 136 to 24
+  Match 6: Student GameStart vs   AB_Open   	Result: 105 to 55
+  Match 7: Student GameStart vs AB_Improved 	Result: 101 to 59
+
+
+Results:
+----------
+Student GameStart  4   78.93%
+
+*************************
+Evaluating: Student GameStart
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student GameStart vs   Random    	Result: 155 to 5
+  Match 2: Student GameStart vs   MM_Null   	Result: 149 to 11
+  Match 3: Student GameStart vs   MM_Open   	Result: 129 to 31
+  Match 4: Student GameStart vs MM_Improved 	Result: 115 to 45
+  Match 5: Student GameStart vs   AB_Null   	Result: 140 to 20
+  Match 6: Student GameStart vs   AB_Open   	Result: 116 to 44
+  Match 7: Student GameStart vs AB_Improved 	Result: 105 to 55
+
+
+Results:
+----------
+Student GameStart   5  81.16%
+
+*************************
+Evaluating: Student GameStart
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student GameStart vs   Random    	Result: 154 to 6
+  Match 2: Student GameStart vs   MM_Null   	Result: 150 to 10
+  Match 3: Student GameStart vs   MM_Open   	Result: 120 to 40
+  Match 4: Student GameStart vs MM_Improved 	Result: 114 to 46
+  Match 5: Student GameStart vs   AB_Null   	Result: 143 to 17
+  Match 6: Student GameStart vs   AB_Open   	Result: 106 to 54
+  Match 7: Student GameStart vs AB_Improved 	Result: 102 to 58
+
+
+Results:
+----------
+Student GameStart  6   79.38%
+
+*************************
+Evaluating: Student GameStart
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student GameStart vs   Random    	Result: 154 to 6
+  Match 2: Student GameStart vs   MM_Null   	Result: 152 to 8
+  Match 3: Student GameStart vs   MM_Open   	Result: 124 to 36
+  Match 4: Student GameStart vs MM_Improved 	Result: 121 to 39
+  Match 5: Student GameStart vs   AB_Null   	Result: 145 to 15
+  Match 6: Student GameStart vs   AB_Open   	Result: 110 to 50
+  Match 7: Student GameStart vs AB_Improved 	Result: 99 to 61
+
+
+Results:
+----------
+Student GameStart    7 80.80%
+
+Process finished with exit code 0
