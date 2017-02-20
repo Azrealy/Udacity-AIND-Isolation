@@ -1,0 +1,230 @@
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/heuristic1.py
+
+*************************
+Evaluating: Student MyMovesVsOpponent0
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent0 vs   Random    	Result: 153 to 7
+  Match 2: Student MyMovesVsOpponent0 vs   MM_Null   	Result: 153 to 7
+  Match 3: Student MyMovesVsOpponent0 vs   MM_Open   	Result: 124 to 36
+  Match 4: Student MyMovesVsOpponent0 vs MM_Improved 	Result: 104 to 56
+  Match 5: Student MyMovesVsOpponent0 vs   AB_Null   	Result: 132 to 28
+  Match 6: Student MyMovesVsOpponent0 vs   AB_Open   	Result: 95 to 65
+  Match 7: Student MyMovesVsOpponent0 vs AB_Improved 	Result: 90 to 70
+
+
+Results:
+----------
+Student MyMovesVsOpponent0     75.98%
+
+*************************
+Evaluating: Student MyMovesVsOpponent0.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent0.5 vs   Random    	Result: 150 to 10
+  Match 2: Student MyMovesVsOpponent0.5 vs   MM_Null   	Result: 154 to 6
+  Match 3: Student MyMovesVsOpponent0.5 vs   MM_Open   	Result: 119 to 41
+  Match 4: Student MyMovesVsOpponent0.5 vs MM_Improved 	Result: 115 to 45
+  Match 5: Student MyMovesVsOpponent0.5 vs   AB_Null   	Result: 133 to 27
+  Match 6: Student MyMovesVsOpponent0.5 vs   AB_Open   	Result: 102 to 58
+  Match 7: Student MyMovesVsOpponent0.5 vs AB_Improved 	Result: 92 to 68
+
+
+Results:
+----------
+Student MyMovesVsOpponent0.5     77.23%
+
+*************************
+Evaluating: Student MyMovesVsOpponent1
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent1 vs   Random    	Result: 156 to 4
+  Match 2: Student MyMovesVsOpponent1 vs   MM_Null   	Result: 147 to 13
+  Match 3: Student MyMovesVsOpponent1 vs   MM_Open   	Result: 120 to 40
+  Match 4: Student MyMovesVsOpponent1 vs MM_Improved 	Result: 110 to 50
+  Match 5: Student MyMovesVsOpponent1 vs   AB_Null   	Result: 140 to 20
+  Match 6: Student MyMovesVsOpponent1 vs   AB_Open   	Result: 115 to 45
+  Match 7: Student MyMovesVsOpponent1 vs AB_Improved 	Result: 101 to 59
+
+
+Results:
+----------
+Student MyMovesVsOpponent1     79.38%
+
+*************************
+Evaluating: Student MyMovesVsOpponent1.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent1.5 vs   Random    	Result: 157 to 3
+  Match 2: Student MyMovesVsOpponent1.5 vs   MM_Null   	Result: 156 to 4
+  Match 3: Student MyMovesVsOpponent1.5 vs   MM_Open   	Result: 127 to 33
+  Match 4: Student MyMovesVsOpponent1.5 vs MM_Improved 	Result: 115 to 45
+  Match 5: Student MyMovesVsOpponent1.5 vs   AB_Null   	Result: 141 to 19
+  Match 6: Student MyMovesVsOpponent1.5 vs   AB_Open   	Result: 106 to 54
+  Match 7: Student MyMovesVsOpponent1.5 vs AB_Improved 	Result: 98 to 62
+
+
+Results:
+----------
+Student MyMovesVsOpponent1.5     80.36%
+
+*************************
+Evaluating: Student MyMovesVsOpponent2
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent2 vs   Random    	Result: 158 to 2
+  Match 2: Student MyMovesVsOpponent2 vs   MM_Null   	Result: 154 to 6
+  Match 3: Student MyMovesVsOpponent2 vs   MM_Open   	Result: 120 to 40
+  Match 4: Student MyMovesVsOpponent2 vs MM_Improved 	Result: 115 to 45
+  Match 5: Student MyMovesVsOpponent2 vs   AB_Null   	Result: 134 to 26
+  Match 6: Student MyMovesVsOpponent2 vs   AB_Open   	Result: 116 to 44
+  Match 7: Student MyMovesVsOpponent2 vs AB_Improved 	Result: 100 to 60
+
+
+Results:
+----------
+Student MyMovesVsOpponent2     80.09%
+
+*************************
+Evaluating: Student MyMovesVsOpponent2.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent2.5 vs   Random    	Result: 156 to 4
+  Match 2: Student MyMovesVsOpponent2.5 vs   MM_Null   	Result: 146 to 14
+  Match 3: Student MyMovesVsOpponent2.5 vs   MM_Open   	Result: 123 to 37
+  Match 4: Student MyMovesVsOpponent2.5 vs MM_Improved 	Result: 118 to 42
+  Match 5: Student MyMovesVsOpponent2.5 vs   AB_Null   	Result: 138 to 22
+  Match 6: Student MyMovesVsOpponent2.5 vs   AB_Open   	Result: 113 to 47
+  Match 7: Student MyMovesVsOpponent2.5 vs AB_Improved 	Result: 97 to 63
+
+
+Results:
+----------
+Student MyMovesVsOpponent2.5     79.55%
+
+*************************
+Evaluating: Student MyMovesVsOpponent3
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent3 vs   Random    	Result: 147 to 13
+  Match 2: Student MyMovesVsOpponent3 vs   MM_Null   	Result: 149 to 11
+  Match 3: Student MyMovesVsOpponent3 vs   MM_Open   	Result: 125 to 35
+  Match 4: Student MyMovesVsOpponent3 vs MM_Improved 	Result: 125 to 35
+  Match 5: Student MyMovesVsOpponent3 vs   AB_Null   	Result: 145 to 15
+  Match 6: Student MyMovesVsOpponent3 vs   AB_Open   	Result: 118 to 42
+  Match 7: Student MyMovesVsOpponent3 vs AB_Improved 	Result: 105 to 55
+
+
+Results:
+----------
+Student MyMovesVsOpponent3     81.61%
+
+*************************
+Evaluating: Student MyMovesVsOpponent3.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent3.5 vs   Random    	Result: 154 to 6
+  Match 2: Student MyMovesVsOpponent3.5 vs   MM_Null   	Result: 153 to 7
+  Match 3: Student MyMovesVsOpponent3.5 vs   MM_Open   	Result: 125 to 35
+  Match 4: Student MyMovesVsOpponent3.5 vs MM_Improved 	Result: 120 to 40
+  Match 5: Student MyMovesVsOpponent3.5 vs   AB_Null   	Result: 145 to 15
+  Match 6: Student MyMovesVsOpponent3.5 vs   AB_Open   	Result: 108 to 52
+  Match 7: Student MyMovesVsOpponent3.5 vs AB_Improved 	Result: 99 to 61
+
+
+Results:
+----------
+Student MyMovesVsOpponent3.5     80.71%
+
+*************************
+Evaluating: Student MyMovesVsOpponent4
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent4 vs   Random    	Result: 157 to 3
+  Match 2: Student MyMovesVsOpponent4 vs   MM_Null   	Result: 154 to 6
+  Match 3: Student MyMovesVsOpponent4 vs   MM_Open   	Result: 129 to 31
+  Match 4: Student MyMovesVsOpponent4 vs MM_Improved 	Result: 117 to 43
+  Match 5: Student MyMovesVsOpponent4 vs   AB_Null   	Result: 132 to 28
+  Match 6: Student MyMovesVsOpponent4 vs   AB_Open   	Result: 112 to 48
+  Match 7: Student MyMovesVsOpponent4 vs AB_Improved 	Result: 93 to 67
+
+
+Results:
+----------
+Student MyMovesVsOpponent4     79.82%
+
+*************************
+Evaluating: Student MyMovesVsOpponent4.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent4.5 vs   Random    	Result: 151 to 9
+  Match 2: Student MyMovesVsOpponent4.5 vs   MM_Null   	Result: 147 to 13
+  Match 3: Student MyMovesVsOpponent4.5 vs   MM_Open   	Result: 124 to 36
+  Match 4: Student MyMovesVsOpponent4.5 vs MM_Improved 	Result: 115 to 45
+  Match 5: Student MyMovesVsOpponent4.5 vs   AB_Null   	Result: 142 to 18
+  Match 6: Student MyMovesVsOpponent4.5 vs   AB_Open   	Result: 111 to 49
+  Match 7: Student MyMovesVsOpponent4.5 vs AB_Improved 	Result: 98 to 62
+
+
+Results:
+----------
+Student MyMovesVsOpponent4.5     79.29%
+
+*************************
+Evaluating: Student MyMovesVsOpponent5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent5 vs   Random    	Result: 155 to 5
+  Match 2: Student MyMovesVsOpponent5 vs   MM_Null   	Result: 150 to 10
+  Match 3: Student MyMovesVsOpponent5 vs   MM_Open   	Result: 118 to 42
+  Match 4: Student MyMovesVsOpponent5 vs MM_Improved 	Result: 123 to 37
+  Match 5: Student MyMovesVsOpponent5 vs   AB_Null   	Result: 136 to 24
+  Match 6: Student MyMovesVsOpponent5 vs   AB_Open   	Result: 107 to 53
+  Match 7: Student MyMovesVsOpponent5 vs AB_Improved 	Result: 104 to 56
+
+
+Results:
+----------
+Student MyMovesVsOpponent5     79.73%
+
+*************************
+Evaluating: Student MyMovesVsOpponent5.5
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student MyMovesVsOpponent5.5 vs   Random    	Result: 156 to 4
+  Match 2: Student MyMovesVsOpponent5.5 vs   MM_Null   	Result: 147 to 13
+  Match 3: Student MyMovesVsOpponent5.5 vs   MM_Open   	Result: 122 to 38
+  Match 4: Student MyMovesVsOpponent5.5 vs MM_Improved 	Result: 119 to 41
+  Match 5: Student MyMovesVsOpponent5.5 vs   AB_Null   	Result: 140 to 20
+  Match 6: Student MyMovesVsOpponent5.5 vs   AB_Open   	Result: 107 to 53
+  Match 7: Student MyMovesVsOpponent5.5 vs AB_Improved 	Result: 96 to 64
+
+
+Results:
+----------
+Student MyMovesVsOpponent5.5     79.20%
+

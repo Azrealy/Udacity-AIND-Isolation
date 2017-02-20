@@ -39,3 +39,84 @@ Results:
 Student CloseToCenter2     76.75%
 
 Process finished with exit code 0
+
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/my_test.py
+
+*************************
+Evaluating: Student CloseToCenter
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student CloseToCenter vs   Random    	Result: 388 to 12
+  Match 2: Student CloseToCenter vs   MM_Null   	Result: 372 to 28
+  Match 3: Student CloseToCenter vs   MM_Open   	Result: 306 to 94
+  Match 4: Student CloseToCenter vs MM_Improved 	Result: 297 to 103
+  Match 5: Student CloseToCenter vs   AB_Null   	Result: 345 to 55
+  Match 6: Student CloseToCenter vs   AB_Open   	Result: 262 to 138
+  Match 7: Student CloseToCenter vs AB_Improved 	Result: 247 to 153
+
+
+Results:
+----------
+Student CloseToCenter     79.18%
+
+Process finished with exit code 0
+
+*************************
+Evaluating: Student CloseToCenter3
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student CloseToCenter3 vs   Random    	Result: 387 to 13
+  Match 2: Student CloseToCenter3 vs   MM_Null   	Result: 372 to 28
+  Match 3: Student CloseToCenter3 vs   MM_Open   	Result: 303 to 97
+  Match 4: Student CloseToCenter3 vs MM_Improved 	Result: 300 to 100
+  Match 5: Student CloseToCenter3 vs   AB_Null   	Result: 337 to 63
+  Match 6: Student CloseToCenter3 vs   AB_Open   	Result: 266 to 134
+  Match 7: Student CloseToCenter3 vs AB_Improved 	Result: 257 to 143
+
+
+Results:
+----------
+Student CloseToCenter3     79.36%
+*************************
+Evaluating: Student CloseToCenter3
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student CloseToCenter3 vs   Random    	Result: 386 to 14
+  Match 2: Student CloseToCenter3 vs   MM_Null   	Result: 370 to 30
+  Match 3: Student CloseToCenter3 vs   MM_Open   	Result: 293 to 107
+  Match 4: Student CloseToCenter3 vs MM_Improved 	Result: 306 to 94
+  Match 5: Student CloseToCenter3 vs   AB_Null   	Result: 339 to 61
+  Match 6: Student CloseToCenter3 vs   AB_Open   	Result: 267 to 133
+  Match 7: Student CloseToCenter3 vs AB_Improved 	Result: 278 to 122
+
+
+Results:
+----------
+Student CloseToCenter3     79.96%
+
+*************************
+Evaluating: Student mixed new
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student mixed new vs   Random    	Result: 385 to 15
+  Match 2: Student mixed new vs   MM_Null   	Result: 374 to 26
+  Match 3: Student mixed new vs   MM_Open   	Result: 307 to 93
+  Match 4: Student mixed new vs MM_Improved 	Result: 286 to 114
+  Match 5: Student mixed new vs   AB_Null   	Result: 342 to 58
+  Match 6: Student mixed new vs   AB_Open   	Result: 272 to 128
+  Match 7: Student mixed new vs AB_Improved 	Result: 242 to 158
+
+
+Results:
+----------
+Student mixed new     78.86%
+
+

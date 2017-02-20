@@ -103,17 +103,17 @@ def game_start(game, player):
     if game.is_winner(player):
         return float("inf")
 
-    if (game.move_count == 1 and game.inactive_player() == player):
+    if (game.move_count < 6):
         location = game.get_player_location(player)
-        v = (location[0] - 3 + location[1] - 3)
-        rate = v * v
+        opponent_moves = game.get_legal_moves(game.get_opponent(player))
 
-        closeIndex = 10
+        if (location[0] >= 2 and location[0] < game.height - 2) and\
+            (location[1] >= 2 and location[1] < game.width - 2):
+            return float(100 - len(opponent_moves))
+        else:
+            my_moves = game.get_legal_moves(player)
 
-        if not rate == 0:
-            closeIndex = 10 / rate
-
-        return closeIndex
+            return float(len(my_moves) - len(opponent_moves))
     else:
         my_moves = game.get_legal_moves(player)
         opponent_moves = game.get_legal_moves(game.get_opponent(player))
@@ -193,6 +193,23 @@ def close_to_center(game,player):
         return float(len(my_moves) - len(opponent_moves))
 
 
+def close_to_center3(game,player):
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+    my_moves = game.get_legal_moves(player)
+
+    if game.move_count < 3 and len(my_moves) == 8:
+        return 100
+    else:
+        opponent_moves = game.get_legal_moves(game.get_opponent(player))
+
+        return float(len(my_moves) - len(opponent_moves))
+
+
 def close_to_center2(game,player):
     if game.is_loser(player):
         return float("-inf")
@@ -240,11 +257,11 @@ def mixed_new(game,player):
     edge = 4
 
     if len(my_moves) > edge:
-        common_moves = set(my_moves).intersection(set(opponent_moves))
+        common = set(my_moves).intersection(set(opponent_moves))
 
-        return float(len(my_moves) - len(opponent_moves) + len(common_moves))
+        return float(len(my_moves) - len(opponent_moves) + len(common))
     else:
-        return float(len(my_moves) - 2 * len(opponent_moves))
+        return float(len(my_moves) - 3 * len(opponent_moves))
 
 def mixed_new4(game,player):
     my_moves = game.get_legal_moves(player)
@@ -252,9 +269,9 @@ def mixed_new4(game,player):
     edge = 4
 
     if len(my_moves) > edge:
-        common_moves = set(my_moves).intersection(set(opponent_moves))
+        common = set(my_moves).intersection(set(opponent_moves))
 
-        return float(len(my_moves) - len(opponent_moves) + len(common_moves))
+        return float(len(my_moves) - len(opponent_moves) + len(common))
     else:
         return float(len(my_moves) - 4 * len(opponent_moves))
 

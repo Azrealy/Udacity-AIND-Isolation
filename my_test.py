@@ -33,8 +33,8 @@ def main():
     #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.close_to_center2, **CUSTOM_ARGS), "Student Close to center2"))
     #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.close_to_oponent2, **CUSTOM_ARGS),
     #                                        "Student close_to_oponent2"))
-    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.close_to_center, **CUSTOM_ARGS),
-                                        "Student CloseToCenter"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.close_to_center3, **CUSTOM_ARGS),
+                                        "Student CloseToCenter3"))
     #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.close_to_center2, **CUSTOM_ARGS),
     #                                    "Student CloseToCenter2"))
     #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.mixed_new4, **CUSTOM_ARGS),
@@ -45,15 +45,15 @@ def main():
     #                                    "Student my_moves_vs_opponent_score4"))
     #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.my_moves_vs_opponent_score5, **CUSTOM_ARGS),
     #                                    "Student my_moves_vs_opponent_score5"))
-    #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.mixed_new, **CUSTOM_ARGS),
-    #                                    "Student mixed new"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=game_agent.mixed_new, **CUSTOM_ARGS),
+                                        "Student mixed new"))
 
     #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.close_to_oponent, **CUSTOM_ARGS),
     #                                    "Student close_to_oponent"))
     #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.common_moves_heavy, **CUSTOM_ARGS),
     #                                    "Student Common Moves Heavy"))
     #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.close_to_center, **CUSTOM_ARGS), "Student Close to center"))
-    #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.improved_score, **CUSTOM_ARGS), "ID_Improved"))
+    test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.improved_score, **CUSTOM_ARGS), "ID_Improved"))
     #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.common_moves, **CUSTOM_ARGS), "Student common_moves"))
     #test_agents.append(tournament.Agent(tournament.CustomPlayer(score_fn=tournament.my_moves_vs_opponent_score, **CUSTOM_ARGS), "Student my_moves_vs_opponent_score"))
 

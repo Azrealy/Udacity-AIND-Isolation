@@ -39,3 +39,45 @@ Results:
 Student GameStart     79.86%
 
 Process finished with exit code 0
+
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/heuristic3.py
+
+*************************
+Evaluating: Student GameStart
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student GameStart vs   Random    	Result: 154 to 6
+  Match 2: Student GameStart vs   MM_Null   	Result: 150 to 10
+  Match 3: Student GameStart vs   MM_Open   	Result: 120 to 40
+  Match 4: Student GameStart vs MM_Improved 	Result: 114 to 46
+  Match 5: Student GameStart vs   AB_Null   	Result: 143 to 17
+  Match 6: Student GameStart vs   AB_Open   	Result: 106 to 54
+  Match 7: Student GameStart vs AB_Improved 	Result: 102 to 58
+
+
+Results:
+----------
+Student GameStart     79.38%
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 154 to 6
+  Match 2: ID_Improved vs   MM_Null   	Result: 155 to 5
+  Match 3: ID_Improved vs   MM_Open   	Result: 115 to 45
+  Match 4: ID_Improved vs MM_Improved 	Result: 115 to 45
+  Match 5: ID_Improved vs   AB_Null   	Result: 135 to 25
+  Match 6: ID_Improved vs   AB_Open   	Result: 109 to 51
+  Match 7: ID_Improved vs AB_Improved 	Result: 92 to 68
+
+
+Results:
+----------
+ID_Improved         78.12%
+
+Process finished with exit code 0
