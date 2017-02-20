@@ -95,6 +95,8 @@ def common_moves2(game,player):
 def common_moves3(game,player):
     return common_moves(game,player,-3.)
 
+## Heuristic 3 Testing ###
+
 def game_start2(game,player):
     return game_start(game,player,2)
 
@@ -140,6 +142,35 @@ def game_start(game, player, factor=2):
         opponent_moves = game.get_legal_moves(game.get_opponent(player))
 
         return float(len(my_moves) - len(opponent_moves))
+
+## Heuristic Mixed ###
+
+def mixed1(game, player, startfactor=2, factor=3):
+    return mixed(game, player,5, -3)
+
+def mixed(game, player, startfactor=2, factor=3):
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+    if (game.move_count < factor):
+        location = game.get_player_location(player)
+        opponent_moves = game.get_legal_moves(game.get_opponent(player))
+
+        if (location[0] >= 2 and location[0] < game.height - 2) and\
+            (location[1] >= 2 and location[1] < game.width - 2):
+            return float(100 - len(opponent_moves))
+        else:
+            my_moves = game.get_legal_moves(player)
+
+            return float(len(my_moves) + factor*len(opponent_moves))
+    else:
+        my_moves = game.get_legal_moves(player)
+        opponent_moves = game.get_legal_moves(game.get_opponent(player))
+
+        return float(len(my_moves) + factor*len(opponent_moves))
 
 def my_moves_vs_opponent_score(game, player):
     my_moves = len(game.get_legal_moves(player))
