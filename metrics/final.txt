@@ -68,3 +68,191 @@ Playing Matches:
 Results:
 ----------
 Student             85.00%
+
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/tournament.py
+
+This script evaluates the performance of the custom heuristic function by
+comparing the strength of an agent using iterative deepening (ID) search with
+alpha-beta pruning against the strength rating of agents using other heuristic
+functions.  The `ID_Improved` agent provides a baseline by measuring the
+performance of a basic agent using Iterative Deepening and the "improved"
+heuristic (from lecture) on your hardware.  The `Student` agent then measures
+the performance of Iterative Deepening and the custom heuristic against the
+same opponents.
+
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 20 to 0
+  Match 2: ID_Improved vs   MM_Null   	Result: 19 to 1
+  Match 3: ID_Improved vs   MM_Open   	Result: 15 to 5
+  Match 4: ID_Improved vs MM_Improved 	Result: 15 to 5
+  Match 5: ID_Improved vs   AB_Null   	Result: 17 to 3
+  Match 6: ID_Improved vs   AB_Open   	Result: 12 to 8
+  Match 7: ID_Improved vs AB_Improved 	Result: 9 to 11
+
+
+Results:
+----------
+ID_Improved         76.43%
+
+*************************
+   Evaluating: Student
+*************************
+
+Playing Matches:
+----------
+  Match 1:   Student   vs   Random    	Result: 18 to 2
+  Match 2:   Student   vs   MM_Null   	Result: 20 to 0
+  Match 3:   Student   vs   MM_Open   	Result: 18 to 2
+  Match 4:   Student   vs MM_Improved 	Result: 14 to 6
+  Match 5:   Student   vs   AB_Null   	Result: 18 to 2
+  Match 6:   Student   vs   AB_Open   	Result: 9 to 11
+  Match 7:   Student   vs AB_Improved 	Result: 16 to 4
+
+
+Results:
+----------
+Student
+
+
+Process finished with exit code 0
+
+
+Number of match : 15
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 57 to 3
+  Match 2: ID_Improved vs   MM_Null   	Result: 56 to 4
+  Match 3: ID_Improved vs   MM_Open   	Result: 47 to 13
+  Match 4: ID_Improved vs MM_Improved 	Result: 45 to 15
+  Match 5: ID_Improved vs   AB_Null   	Result: 50 to 10
+  Match 6: ID_Improved vs   AB_Open   	Result: 37 to 23
+  Match 7: ID_Improved vs AB_Improved 	Result: 37 to 23
+
+
+Results:
+----------
+ID_Improved         78.33%
+
+*************************
+   Evaluating: Student
+*************************
+
+Playing Matches:
+----------
+  Match 1:   Student   vs   Random    	Result: 59 to 1
+  Match 2:   Student   vs   MM_Null   	Result: 57 to 3
+  Match 3:   Student   vs   MM_Open   	Result: 51 to 9
+  Match 4:   Student   vs MM_Improved 	Result: 42 to 18
+  Match 5:   Student   vs   AB_Null   	Result: 54 to 6
+  Match 6:   Student   vs   AB_Open   	Result: 40 to 20
+  Match 7:   Student   vs AB_Improved 	Result: 30 to 30
+
+
+Results:
+----------
+Student             79.29%
+
+
+Number of match : 25
+/home/lety/anaconda3/envs/aind/bin/python /home/lety/workspace/Udacity-AIND-Isolation/tournament.py
+
+This script evaluates the performance of the custom heuristic function by
+comparing the strength of an agent using iterative deepening (ID) search with
+alpha-beta pruning against the strength rating of agents using other heuristic
+functions.  The `ID_Improved` agent provides a baseline by measuring the
+performance of a basic agent using Iterative Deepening and the "improved"
+heuristic (from lecture) on your hardware.  The `Student` agent then measures
+the performance of Iterative Deepening and the custom heuristic against the
+same opponents.
+
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 94 to 6
+  Match 2: ID_Improved vs   MM_Null   	Result: 93 to 7
+  Match 3: ID_Improved vs   MM_Open   	Result: 74 to 26
+  Match 4: ID_Improved vs MM_Improved 	Result: 75 to 25
+  Match 5: ID_Improved vs   AB_Null   	Result: 92 to 8
+  Match 6: ID_Improved vs   AB_Open   	Result: 67 to 33
+  Match 7: ID_Improved vs AB_Improved 	Result: 68 to 32
+
+
+Results:
+----------
+ID_Improved         80.43%
+
+*************************
+   Evaluating: Student
+*************************
+
+Playing Matches:
+----------
+  Match 1:   Student   vs   Random    	Result: 98 to 2
+  Match 2:   Student   vs   MM_Null   	Result: 89 to 11
+  Match 3:   Student   vs   MM_Open   	Result: 82 to 18
+  Match 4:   Student   vs MM_Improved 	Result: 80 to 20
+  Match 5:   Student   vs   AB_Null   	Result: 88 to 12
+  Match 6:   Student   vs   AB_Open   	Result: 68 to 32
+  Match 7:   Student   vs AB_Improved 	Result: 66 to 34
+
+
+Results:
+----------
+Student             81.57%
+
+Process finished with exit code 0
+
+num of matches 100
+
+*************************
+ Evaluating: ID_Improved
+*************************
+
+Playing Matches:
+----------
+  Match 1: ID_Improved vs   Random    	Result: 380 to 20
+  Match 2: ID_Improved vs   MM_Null   	Result: 385 to 15
+  Match 3: ID_Improved vs   MM_Open   	Result: 321 to 79
+  Match 4: ID_Improved vs MM_Improved 	Result: 311 to 89
+  Match 5: ID_Improved vs   AB_Null   	Result: 348 to 52
+  Match 6: ID_Improved vs   AB_Open   	Result: 277 to 123
+  Match 7: ID_Improved vs AB_Improved 	Result: 260 to 140
+
+
+Results:
+----------
+ID_Improved         81.50%
+
+*************************
+   Evaluating: Student
+*************************
+
+Playing Matches:
+----------
+  Match 1:   Student   vs   Random    	Result: 388 to 12
+  Match 2:   Student   vs   MM_Null   	Result: 368 to 32
+  Match 3:   Student   vs   MM_Open   	Result: 306 to 94
+  Match 4:   Student   vs MM_Improved 	Result: 308 to 92
+  Match 5:   Student   vs   AB_Null   	Result: 340 to 60
+  Match 6:   Student   vs   AB_Open   	Result: 277 to 123
+  Match 7:   Student   vs AB_Improved 	Result: 252 to 148
+
+
+Results:
+----------
+Student             79.96%

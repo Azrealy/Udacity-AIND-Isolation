@@ -16,7 +16,14 @@ class Timeout(Exception):
 ## Heuristic 1 ###
 
 def my_moves_vs_opponent_moves(game, player, factor=0):
-
+    """
+    Returns a score for a game state and player based on his moves and
+    opponent moves
+    :param game:
+    :param player:
+    :param factor: weight of opponent moves
+    :return:
+    """
     if game.is_loser(player):
         return float("-inf")
 
@@ -31,6 +38,14 @@ def my_moves_vs_opponent_moves(game, player, factor=0):
 ## Heuristic 2 ###
 
 def common_moves(game, player, factor=1):
+    """
+    Returns a score for a game and player based on the intersection of player
+    legal moves and opponent legal moves.
+    :param game:
+    :param player:
+    :param factor: weight of the common moves
+    :return:
+    """
     if game.is_loser(player):
         return float("-inf")
 
@@ -46,7 +61,16 @@ def common_moves(game, player, factor=1):
 
 ## Heuristic 3 Testing ###
 
-def game_start(game, player, factor=2):
+def center_opening(game, player, factor=2):
+    """
+    Return a score for game and player based on the stage of the game, my moves,
+    oponent moves and moves targeting the center of the board.
+    If the game is in early state, gives weight to center moves
+    :param game:
+    :param player:
+    :param factor: move quantity threshold for center opening
+    :return:
+    """
     if game.is_loser(player):
         return float("-inf")
 
@@ -73,6 +97,15 @@ def game_start(game, player, factor=2):
 ## Heuristic Mixed ###
 
 def final_heuristic(game, player, startfactor=2, factor=3):
+    """
+        Return a score for game and player based on the stage of the game, my moves,
+        oponent moves (with weight) and moves targeting the center of the board.
+        :param game:
+        :param player:
+        :param startfactor: move quantity threshold for center opening
+        :param factor: opponent moves weight
+        :return:
+        """
     if game.is_loser(player):
         return float("-inf")
 
@@ -274,38 +307,43 @@ class CustomPlayer:
         if self.time_left() < self.TIMER_THRESHOLD:
             raise Timeout()
 
+        # keeps dfs visited path
         path = []
         score, path = self.minimax_max_value(game, depth, path)
-        choose = path[0]
 
-        if not maximizing_player:
-            choose = path[1]
-
-        return score, choose
+        # return first node of the path
+        return score, path[0]
 
 
     def minimax_max_value(self, game, depth, path, maximizing_player=True):
+        # Auxiliary for max nodes
         if self.time_left() < self.TIMER_THRESHOLD:
             raise Timeout()
 
         if depth == 0:
+            # Returns score
             return self.score(game, self), path
 
         candidate = (float("-inf"), [(-1, -1)])
+
+        #Get possible moves
         possible_moves = game.get_legal_moves(game.active_player)
 
         for move in possible_moves:
+            # Tries each move
             forecast_game = game.forecast_move(move)
 
+            # Gets move score and path (recursion)
             move_score = self.minimax_min_value(forecast_game, depth - 1, path,not maximizing_player)[0]
 
+            # If it better keeps
             if move_score > candidate[0]:
                 candidate = (move_score, path + [move])
 
         return candidate
 
     def minimax_min_value(self, game, depth, path,maximizing_player=True):
-
+        # Auxiliary for min nodes
         if self.time_left() < self.TIMER_THRESHOLD:
             raise Timeout()
 
@@ -313,13 +351,17 @@ class CustomPlayer:
             return self.score(game, self), path
 
         candidate = (float("inf"), [(-1, -1)])
+        # Get possible moves
         possible_moves = game.get_legal_moves(game.active_player)
 
         for move in possible_moves:
+            # Tries each move
             forecast_game = game.forecast_move(move)
 
+            # Gets move score and path (recursion)
             move_score = self.minimax_max_value(forecast_game, depth - 1, path, not maximizing_player)[0]
 
+            # If it better keeps
             if move_score < candidate[0]:
                 candidate = (move_score, move)
 
@@ -367,13 +409,14 @@ class CustomPlayer:
             raise Timeout()
 
         path = []
+        # keeps dfs visited path
         value, path = self.alphabeta_max_value(game,depth, path, alpha, beta, maximizing_player)
 
         if len(path) == 0:
             return float("-inf"),(-1,-1)
 
+        # returns score and first visit of path
         return value, path[0]
-
 
 
     def alphabeta_max_value(self, game, depth, path, alpha=float("-inf"), beta=float("inf"), maximizing_player=True):
@@ -388,20 +431,22 @@ class CustomPlayer:
         possible_moves = game.get_legal_moves(game.active_player)
 
         for move in possible_moves:
+            # Tries each move
             forecast_game = game.forecast_move(move)
 
             move_score = self.alphabeta_min_value(forecast_game, depth-1, path, alpha, beta, not maximizing_player)[0]
 
+            # If it better keeps
             if move_score > candidate[0]:
                 candidate = (move_score, path+[move])
 
+            #pruning
             if move_score >= beta:
                 return move_score, path+[move]
 
             alpha = max(alpha,move_score)
 
         return candidate
-
 
     def alphabeta_min_value(self, game, depth, path, alpha=float("-inf"), beta=float("inf"), maximizing_player=True):
 
@@ -415,13 +460,16 @@ class CustomPlayer:
         possible_moves = game.get_legal_moves(game.active_player)
 
         for move in possible_moves:
+            # Tries each move
             forecast_game = game.forecast_move(move)
 
             move_score = self.alphabeta_max_value(forecast_game, depth - 1, path, alpha, beta, not maximizing_player)[0]
 
+            # If it better keeps
             if move_score < candidate[0]:
                 candidate = (move_score,move)
 
+            # pruning
             if candidate[0] <= alpha:
                 return move_score,path+[move]
 

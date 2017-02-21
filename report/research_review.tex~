@@ -29,18 +29,13 @@
 \usepackage{cite}
 \usepackage{pifont}
 \usepackage{float}
-
-
 \usepackage{color}     % para snipets de codigo coloreados
 \usepackage{xcolor}
 \usepackage{fancybox}  % para el sbox de los snipets de codigo
-
-
-	\usepackage[pdftex]{graphicx}
-	\usepackage{graphicx} %paquete para incluir imagenes
-
-	\usepackage{caption}
-	\usepackage{subcaption}
+\usepackage[pdftex]{graphicx}
+\usepackage{graphicx} %paquete para incluir imagenes
+\usepackage{caption}
+\usepackage{subcaption}
 
 
 \lstset{frame=tb,
@@ -84,8 +79,7 @@
 \date{\normalsize{February 14th, 2017}} % <--- Cambiar de acuerdo al tp actual
 
 \title{
-	\centering
-	\includegraphics[width=0.12\textwidth]{udacity-small.png}\\
+	\includegraphics[width=0.05\textwidth]{udacity-small.png}\\
 Build a Game-Playing Agent \\
 \large {Research Review}
 } % <--- Cambiar de acuerdo al tp actual
@@ -94,14 +88,75 @@ Build a Game-Playing Agent \\
 \renewcommand\thesubsection{\thesection.\Roman{subsection}}
 
 \begin{document}
-\maketitle
 
-\section{Goals or techiniques introduced}
+\begin{center}
 
+\includegraphics[width=0.05\textwidth]{udacity-small.png}\\
+Build a Game-Playing Agent: Research Review \\
+Leticia L. Rodriguez \\
+\end{center}
 
+\noindent Selected paper: \textbf{Game Tree Searching by Min/Max Approximation - Rivest} \\
 
-\section{Paper results}
+\noindent\textbf{Goals or techniques introduced}
+\bigskip
 
+The paper introduces a new penalty-based iterative search method based on the idea of approximating \textit{min} and \textit{max} by generalized mean values.
+
+It first starts defining generalized mean values as:
+
+\[
+M_{p}(\textbf{a})=  \left(\dfrac{1}{n}\sum_{i=1}^{n}a^{p}\right)^{1/p}
+\]
+
+In order to give some context, it defines game tree, minimax, score function (evaluation function) and iterative deepening. 
+
+Finally, it arrives to the definition of iterative heuristic, which \textit{grow} the search tree one step at a time.
+
+So, the goal of the technique, introduced in the paper, is obtain a metric in each leaf that is used to evaluate in which node the partial tree could be expanded in order to achieve better results.  
+
+In particular, the technique presented \textbf{\textit{min/max approximation}} is an special case of penalty-based search method where the score of each node is calculated using this approximating function: 
+
+\[
+\tilde{v}(c) =  \begin{cases}
+						\hat{v}(c) 
+                        & if\;c \;is\; leaf\; of\; the\; partial\; tree\\
+                      	M_{p}(\tilde{v}(d_{1}),\tilde{v}(d_{2})..\tilde{v}(d_{n}))  
+                        & if\; c\; is\; Max\; node\; not\; leaf\\
+                     	M_{-p}(\tilde{v}(d_{1}),\tilde{v}(d_{2})..\tilde{v}(d_{n}))  
+                        & if\; c\; is\; Min\; node\; not\; leaf
+                        \end{cases}
+\]
+
+Where $\hat{v}(c)$ is function uses to calculate score in Minimax and $d$ $\in$ $S(c)$ $c$ node children. 
+
+It assigns a nonnegative \textit{penalty} or weight $w(x)$  to each edges of the tree using derivatives: 
+
+\[
+w(x) = -\log(D(f(x),x))
+\]
+
+\[
+D(x,y) = \frac{\partial \tilde{v}_{E}(x)}{\partial \tilde{v}_{E}(y)}
+\]
+
+where $f(x)$ is father of node $x$ in partial tree and $E$ indicates the function applied to the partial tree.
+
+Each leaf of the partial tree to be expanded is going to have the sum of the edges from the root to the leaf. The less value leaf is the best candidate to be expanded. 
+
+\bigskip
+\noindent\textbf{Paper results}
+\bigskip
+
+\textbf{Min/max approximation} plays in favor of those moves in which min/max could be achieved in several ways. For example, $M_{10}$(35,40) $>$ $M_{10}$(30,40) while $max$(35,40) = $max$(30,40). So, the nodes better rated have a good backup or better secondary moves. 
+
+In a Connect-Four game experimental results, the presented technique beats alpha-beta implementation on a move-based resource limit but it looses against it in a time limited context.
+
+The alpha-beta implementation considered almost three times positions than min/max approximation over a time limited context.
+
+Also, the move operator is called 3500 times per second in alpha-beta against 800 times per second of the proposed implementation. 
+
+As a conclusion, the min/max approximation does a better resource allocation searching in deep in the most promising sections of the game tree and shallowly in the unpromising parts.
 
 
 

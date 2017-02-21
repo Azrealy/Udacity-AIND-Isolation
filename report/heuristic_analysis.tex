@@ -108,7 +108,7 @@ Each heuristic idea is evaluated separately and compared to ID\_Improved evaluat
 
 \subsubsection{Definition}
 
-The ID\_Improved heuristic uses the function:
+The \textit{ID\_Improved} heuristic uses the function:
 
 \[
 	score = my\_moves - opponent\_moves
@@ -122,11 +122,11 @@ As we saw in the course, this metric could be improved assigning weight to each 
 
 If $a=1$ and $b=-1$ the new heuristic is equal to ID\_Improved.
 
-It's important to say that some combination of $a$ and $b$ values are equivalent, for example, $a=1$, $b=-1$ and $a=2$, $b=-2$. 
+It's important to say that some combinations of $a$ and $b$ values are equivalent, for example, $a=1$, $b=-1$ and $a=2$, $b=-2$. 
 
 In order to deal with this issue, in the experimentation section, the values tested are constrained. Further experimentation could go through more values.
 
-Different values of $b$ are analyzed in order to determine new values that achieve better performance than ID\_Improved. In particular, the tested function is going to be:
+Different values of $b$ are analyzed in order to determine new values that achieve better performance than \textit{ID\_Improved}. In particular, the tested function is going to be:
 
 \[
 	score = my\_moves \textbf{+} \textbf{b}*opponent\_moves
@@ -151,7 +151,7 @@ The score function pseudo-code:\\
 
 \subsubsection{Experimentation results}
 
-To get accurate results the number of matches for each player (NUM\_MATCHES) has been incremented to 100.   
+To get accurate results the number of matches for each player (NUM\_MATCHES) has been incremented to 40.   
 
 The idea is to give more weight to those positions with less opponent moves available, so a negative value of \textbf{b}, in range 0 to 6, are going to be used.
 
@@ -161,7 +161,7 @@ The performance rates obtained are shown in this graph:
 \includegraphics[width=0.8\textwidth]{mymovesopponent.png}\\
 \end{center}
 
-For some values, the heuristic beats ID\_Improved.
+For some values, the heuristic beats \textit{ID\_Improved}.
 
 \subsection{Heuristic 2: Center opening}
 
@@ -181,7 +181,7 @@ In a 7x7 board, the positions with maximum number of moves are: \\
 \includegraphics[width=0.3\textwidth]{center_moves.png}\\
 \end{center}
 
-The heuristic, proposed in this section, tries to give more weight to those moves that put the player in the center of the board. \\
+The heuristic, proposed in this section, tries to give more weight to moves that put the player in the center of the board. \\
 
 For any board bigger than 5x5 dimension, we can define those center boxes as: \\
 \[
@@ -220,15 +220,15 @@ Notice that the center moves are selected only at the start of the game. The ide
 
 \subsubsection{Experimentation results}
 
-The algorithm applies a different weight in central positions of the boards when the game has recently started. It uses the quantity of moves that have been made in the game to determine whenever apply the center score. \\
+The algorithm assign a different weight to central positions of the board when the game has recently started. It uses the quantity of moves that have been made in the game to determine whenever apply the center score. \\
 
-Different constraint of moves quantity were tested. The results are:\\
+Different constraints of moves quantity were tested. The results are:\\
 
 \begin{center}
 \includegraphics[width=0.7\textwidth]{centeropening.png}\\
 \end{center}
 
-Clearly, the graph shows that for all the values tested, the heuristic is better than ID\_Improved. Further analysis is needed to determine if there is value where this doesn't occur.
+Clearly, the graph shows that for all the values tested, the heuristic is better than \textit{ID\_Improved}. Further analysis is needed to determine if there is value where it doesn't occur.
 
 \subsection{Heuristic 3: Common moves}
 
@@ -241,10 +241,10 @@ This heuristic analyze the intersection between my legal moves and my opponent m
 The computational cost to do an intersection could be high. For the implementation, the \textit{set.intersection} method was used. The selection is based on these results:
 
 \begin{center}
-\includegraphics[width=0.5\textwidth]{time_intersec.png}\\
+\includegraphics[width=0.5\textwidth]{time_intersec.PNG}\\
 \end{center}
 
-\scriptsize{From: http://blog.michelemattioni.me/2015/01/10/list-intersection-in-python-lets-do-it-quickly/}. \\
+{\footnotesize From: http://blog.michelemattioni.me/2015/01/10/list-intersection-in-python-lets-do-it-quickly}/\\
 
 Common moves Heuristic pseudo-code: \\
 
@@ -273,13 +273,13 @@ These are the results of the tests:
 \includegraphics[width=0.7\textwidth]{commonmoves.png}\\
 \end{center}
 
-Surprisingly, an improvement against ID\_Improved is achieved when common moves has less weight in the score.
+Surprisingly, an improvement against \textit{ID\_Improved} is achieved when common moves has less weight in the score. One explanation could be that the implementation checks player legal moves that are going to be played after the opponent moves, so there is a possibility that opponent select box that are shared with the player. This has the opposite effect than proposed in hypothesis.
 
 \subsection{Final Heuristic: Mixed}
 
 \subsubsection{Definition}
 
-The ID\_Improved heuristic has been defeated many times by previous heuristics. In this section, a new evaluation function is introduced base on the combination of best results achieved. \\
+The \textit{ID\_Improved} heuristic has been defeated many times by previous heuristics. In this section, a new evaluation function is introduced base on the combination of best results achieved. \\
 
 In particular, this heuristic is going to be a combination of \textit{Center Opening} and \textit{My Moves vs Opponent Moves with weights}. \\
 
@@ -313,12 +313,18 @@ Proposed Heuristic pseudo-code:\\
 \EndFunction
 \end{algorithmic}
 
+
 \subsubsection{Experimentation results}
 
+This heuristic was tested against \textit{ID\_Improved} in different NUM\_MATCHES values. The results in this table:\\
+
+\begin{center}
+\includegraphics[width=0.7\textwidth]{results.png}\\
+\end{center}
 
 \section{Conclusions}
 
-In the present work, three heuristics where introduced:
+In the present work, three heuristics were introduced:
 
 \begin{itemize}
 \item \textbf{My Moves vs Opponent Moves with weights:} that shows better performance than ID\_Improved for some values. 
@@ -326,9 +332,19 @@ In the present work, three heuristics where introduced:
 \item \textbf{Common moves:} that for some values show better performance than ID\_Improved but with an unexpected behavior.
 \end{itemize}
 
-Finally, it combines the two first heuristics with their better results in order to propose a final heuristic that could achieve a performance of percent.
+Finally, it combines the two first heuristics with their better results in order to propose a final heuristic.
 
-The improvement was just of . Due some randomness in execution, besides to have incremented the game match, it not an outstanding result.
+The recommendation of the mixed heuristic is based on:
+
+\begin{itemize}
+  \item It uses an optimization of center opening. So the game start is going to be the same as the evaluate \textit{Center Opening} 
+  \item Increase the weight of opponent moves to achieve better results in cases that \textit{Center Opening}  doesn't applies 
+  \item The results obtained in experimentation shows a better performance against \textit{ID\_Improved}
+\end{itemize}
+
+
+Due some randomness in execution, besides to have incremented the game match, the new heuristic doesn't seems to have an outstanding result.
+
 
 % \section{Appendix}
 

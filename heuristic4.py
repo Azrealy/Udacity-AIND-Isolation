@@ -1,7 +1,7 @@
 import tournament
 import game_agent
 
-NUM_MATCHES = 40  # number of matches against each opponent
+NUM_MATCHES = 100  # number of matches against each opponent
 
 def main():
 

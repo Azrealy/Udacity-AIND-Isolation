@@ -128,9 +128,9 @@ In particular, the technique presented \textbf{\textit{min/max approximation}} i
                         \end{cases}
 \]
 
-Where $\hat{v}(c)$ is function uses to calculate score in Minimax and $d$ $\in$ $S(c)$ $c$ node tree child. 
+Where $\hat{v}(c)$ is function uses to calculate score in Minimax and $d$ $\in$ $S(c)$ $c$ node children. 
 
-It assign a nonnegative \textit{penalty} or weight $w(x)$  to each edges of the tree using derivatives: 
+It assigns a nonnegative \textit{penalty} or weight $w(x)$  to each edges of the tree using derivatives: 
 
 \[
 w(x) = -\log(D(f(x),x))
@@ -140,9 +140,9 @@ w(x) = -\log(D(f(x),x))
 D(x,y) = \frac{\partial \tilde{v}_{E}(x)}{\partial \tilde{v}_{E}(y)}
 \]
 
-where $f(x)$ is father of node x in partial tree and $E$ indicates the function applied to the partial tree.
+where $f(x)$ is father of node $x$ in partial tree and $E$ indicates the function applied to the partial tree.
 
-Each leaf of the partial tree to be expanded is going to have the sum of the edges from the root to the leave. The less value leaf is the best candidate to be expanded. 
+Each leaf of the partial tree to be expanded is going to have the sum of the edges from the root to the leaf. The less value leaf is the best candidate to be expanded. 
 
 \bigskip
 \noindent\textbf{Paper results}
