@@ -1,0 +1,18 @@
+*************************
+Evaluating: Student Mixed1
+*************************
+
+Playing Matches:
+----------
+  Match 1: Student Mixed1 vs   Random    	Result: 151 to 9
+  Match 2: Student Mixed1 vs   MM_Null   	Result: 141 to 19
+  Match 3: Student Mixed1 vs   MM_Open   	Result: 138 to 22
+  Match 4: Student Mixed1 vs MM_Improved 	Result: 121 to 39
+  Match 5: Student Mixed1 vs   AB_Null   	Result: 140 to 20
+  Match 6: Student Mixed1 vs   AB_Open   	Result: 114 to 46
+  Match 7: Student Mixed1 vs AB_Improved 	Result: 94 to 66
+
+
+Results:
+----------
+Student Mixed1      80.27%
