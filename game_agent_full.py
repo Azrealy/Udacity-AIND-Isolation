@@ -13,7 +13,49 @@ class Timeout(Exception):
     """Subclass base exception for code clarity."""
     pass
 
-## Heuristic 1 ###
+#### Heuristic 1 : Testing ####
+def my_moves_vs_opponent_moves0(game, player):
+    return my_moves_vs_opponent_moves(game, player)
+
+def my_moves_vs_opponent_moves0_5(game, player):
+    return my_moves_vs_opponent_moves(game, player, 0.5)
+
+def my_moves_vs_opponent_moves1(game, player):
+    return my_moves_vs_opponent_moves(game, player, 1.)
+
+def my_moves_vs_opponent_moves1_5(game, player):
+    return my_moves_vs_opponent_moves(game, player, 1.5)
+
+def my_moves_vs_opponent_moves2(game, player):
+    return my_moves_vs_opponent_moves(game, player, 2.)
+
+def my_moves_vs_opponent_moves2_5(game, player):
+    return my_moves_vs_opponent_moves(game, player, 2.5)
+
+def my_moves_vs_opponent_moves3(game, player):
+    return my_moves_vs_opponent_moves(game, player, 3.)
+
+def my_moves_vs_opponent_moves3_5(game, player):
+    return my_moves_vs_opponent_moves(game, player, 3.5)
+
+
+def my_moves_vs_opponent_moves4(game, player):
+    return my_moves_vs_opponent_moves(game, player, 4.)
+
+
+def my_moves_vs_opponent_moves4_5(game, player):
+    return my_moves_vs_opponent_moves(game, player, 4.5)
+
+
+def my_moves_vs_opponent_moves5(game, player):
+    return my_moves_vs_opponent_moves(game, player, 5.)
+
+def my_moves_vs_opponent_moves5_5(game, player):
+    return my_moves_vs_opponent_moves(game, player, 5.5)
+
+def my_moves_vs_opponent_moves6(game, player):
+    return my_moves_vs_opponent_moves(game, player, 6.)
+
 
 def my_moves_vs_opponent_moves(game, player, factor=0):
 
@@ -28,7 +70,7 @@ def my_moves_vs_opponent_moves(game, player, factor=0):
 
     return float(my_moves - factor*opponent_moves)
 
-## Heuristic 2 ###
+## Heuristic 2 Testing ###
 
 def common_moves(game, player, factor=1):
     if game.is_loser(player):
@@ -44,7 +86,38 @@ def common_moves(game, player, factor=1):
 
     return float(len(my_moves)-len(opponent_moves)+factor*len(common))
 
+def common_moves1(game,player):
+    return common_moves(game,player,-1.)
+
+def common_moves2(game,player):
+    return common_moves(game,player,-2.)
+
+def common_moves3(game,player):
+    return common_moves(game,player,-3.)
+
 ## Heuristic 3 Testing ###
+
+def game_start2(game,player):
+    return game_start(game,player,2)
+
+def game_start3(game,player):
+    return game_start(game,player,3)
+
+def game_start4(game,player):
+    return game_start(game,player,4)
+
+def game_start5(game,player):
+    return game_start(game,player,5)
+
+def game_start6(game,player):
+    return game_start(game,player,6)
+
+def game_start7(game,player):
+    return game_start(game,player,7)
+
+
+def game_start2(game,player):
+    return game_start(game,player)
 
 def game_start(game, player, factor=2):
     if game.is_loser(player):
@@ -72,7 +145,10 @@ def game_start(game, player, factor=2):
 
 ## Heuristic Mixed ###
 
-def final_heuristic(game, player, startfactor=2, factor=3):
+def mixed1(game, player, startfactor=2, factor=3):
+    return mixed(game, player,5, -3)
+
+def mixed(game, player, startfactor=2, factor=3):
     if game.is_loser(player):
         return float("-inf")
 
@@ -96,6 +172,160 @@ def final_heuristic(game, player, startfactor=2, factor=3):
 
         return float(len(my_moves) + factor*len(opponent_moves))
 
+def my_moves_vs_opponent_score(game, player):
+    my_moves = len(game.get_legal_moves(player))
+    opponent_moves = len(game.get_legal_moves(game.get_opponent(player)))
+
+    return float(my_moves - 2*opponent_moves)
+
+def my_moves_vs_opponent_score3(game, player):
+    my_moves = len(game.get_legal_moves(player))
+    opponent_moves = len(game.get_legal_moves(game.get_opponent(player)))
+
+    return float(my_moves - 3*opponent_moves)
+
+def my_moves_vs_opponent_score4(game, player):
+    my_moves = len(game.get_legal_moves(player))
+    opponent_moves = len(game.get_legal_moves(game.get_opponent(player)))
+
+    return float(my_moves - 4*opponent_moves)
+
+def my_moves_vs_opponent_score5(game, player):
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+    my_moves = len(game.get_legal_moves(player))
+    opponent_moves = len(game.get_legal_moves(game.get_opponent(player)))
+
+    return float(my_moves - 5*opponent_moves)
+
+def common_moves_heavy(game, player):
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+
+    my_moves = game.get_legal_moves(player)
+    opponent_moves = game.get_legal_moves(game.get_opponent(player))
+
+    common_moves = set(my_moves).intersection(set(opponent_moves))
+
+    return float(len(my_moves)-len(opponent_moves)+2*len(common_moves))
+
+def close_to_center(game,player):
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+
+    if game.move_count < 10:
+        (x0, y0) = (int(game.width / 2), int(game.height / 2))
+        location = game.get_player_location(player)
+
+        if location == (x0,y0):
+            return 100
+        else:
+            my_moves = game.get_legal_moves(player)
+            if (x0,y0) in my_moves:
+                return 50
+            else:
+                opponent_moves = game.get_legal_moves(game.get_opponent(player))
+                return float(len(my_moves) - len(opponent_moves))
+    else:
+        my_moves = game.get_legal_moves(player)
+        opponent_moves = game.get_legal_moves(game.get_opponent(player))
+
+        return float(len(my_moves) - len(opponent_moves))
+
+
+def close_to_center3(game,player):
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+    my_moves = game.get_legal_moves(player)
+
+    if game.move_count < 3 and len(my_moves) == 8:
+        return 100
+    else:
+        opponent_moves = game.get_legal_moves(game.get_opponent(player))
+
+        return float(len(my_moves) - len(opponent_moves))
+
+
+def close_to_center2(game,player):
+    if game.is_loser(player):
+        return float("-inf")
+
+    if game.is_winner(player):
+        return float("inf")
+
+    my_moves = game.get_legal_moves(player)
+    location = game.get_player_location(player)
+    opponent_moves = game.get_legal_moves(game.get_opponent(player))
+    v = (location[0]-3+location[1]-3)
+    rate = v*v
+
+    closeIndex = 10
+
+    if not rate == 0:
+        closeIndex = 10/rate
+
+    return float(closeIndex+len(my_moves)-len(opponent_moves))
+
+def close_to_oponent(game,player):
+    my_moves = game.get_legal_moves(player)
+    opponent = game.get_player_location(game.get_opponent(player))
+    closeIndex = float(sum([ pow(x-opponent[0]+y-opponent[1],2) for (x,y) in my_moves ]))
+    return closeIndex
+
+def close_to_oponent2(game,player):
+    my_moves = game.get_legal_moves(player)
+    opponent = game.get_player_location(game.get_opponent(player))
+    opponent_moves = game.get_legal_moves(game.get_opponent(player))
+
+    location = game.get_player_location(player)
+    v = (location[0]-opponent[0]+location[1]-opponent[1])
+    rate = v*v
+    close_index = 10
+
+    if not rate == 0:
+        close_index = 10/rate
+
+    return float(close_index+len(my_moves)-len(opponent_moves))
+
+def mixed_new(game,player):
+    my_moves = game.get_legal_moves(player)
+    opponent_moves = game.get_legal_moves(game.get_opponent(player))
+    edge = 4
+
+    if len(my_moves) > edge:
+        common = set(my_moves).intersection(set(opponent_moves))
+
+        return float(len(my_moves) - len(opponent_moves) + len(common))
+    else:
+        return float(len(my_moves) - 3 * len(opponent_moves))
+
+def mixed_new4(game,player):
+    my_moves = game.get_legal_moves(player)
+    opponent_moves = game.get_legal_moves(game.get_opponent(player))
+    edge = 4
+
+    if len(my_moves) > edge:
+        common = set(my_moves).intersection(set(opponent_moves))
+
+        return float(len(my_moves) - len(opponent_moves) + len(common))
+    else:
+        return float(len(my_moves) - 4 * len(opponent_moves))
 
 def custom_score(game, player):
     """Calculate the heuristic value of a game state from the point of view
@@ -120,7 +350,7 @@ def custom_score(game, player):
         The heuristic value of the current game state to the specified player.
     """
 
-    return final_heuristic(game,player,5,-3)
+    pass
 
 class CustomPlayer:
     """Game-playing agent that chooses a move using your evaluation function
